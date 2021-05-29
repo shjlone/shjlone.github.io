@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>native crash 分析 | Shjlone&#39;s Blog</title>
+    
+    
+        <meta name="keywords" content="Android">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Crash类型：  Framework&#x2F;App Crash：Java层崩溃 Native Crash：C&#x2F;C++层崩溃 Kernel Crash：内核崩溃  tombstone文件的组成部分： Build fingerprint Crashed process and PIDS Terminated signal and fault address CPU registers Call stack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="native crash 分析">
+<meta property="og:url" content="http://shjlone.github.io/wiki/Android/2018-08-08-native%20crash%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Shjlone&#39;s Blog">
+<meta property="og:description" content="Crash类型：  Framework&#x2F;App Crash：Java层崩溃 Native Crash：C&#x2F;C++层崩溃 Kernel Crash：内核崩溃  tombstone文件的组成部分： Build fingerprint Crashed process and PIDS Terminated signal and fault address CPU registers Call stack">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-29T05:42:40.120Z">
+<meta property="article:modified_time" content="2021-05-29T06:00:22.361Z">
+<meta property="article:author" content="shjlone">
+<meta property="article:tag" content="Android">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Shjlone&#39;s Blog" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Shjlone&#39;s Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Android
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            core
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Android/core/2016-10-01-Android%20View%20%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B/">Android View绘制流程</a></li>  <li class="file"><a href="/wiki/Android/core/2017-10-01-Android%20%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/">Android事件分发机制</a></li>  <li class="file"><a href="/wiki/Android/core/2021-04-29-ContentProvider/">Android基础：ContentProvider</a></li>  <li class="file"><a href="/wiki/Android/core/2021-05-14-Binder/">Binder</a></li>  <li class="file"><a href="/wiki/Android/core/2021-05-27-ConstraintLayout/">ConstraintLayout</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/Android/2013-09-09-Android%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/">Android常见问题整理</a></li>  <li class="file"><a href="/wiki/Android/2014-05-06-Android%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/">Android资料整理</a></li>  <li class="file"><a href="/wiki/Android/2014-09-09-AndroidManifest%E6%8F%8F%E8%BF%B0%E6%96%87%E4%BB%B6/">AndroidManifest描述文件</a></li>  <li class="file"><a href="/wiki/Android/2015-07-15-Dagger2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Dagger2学习笔记</a></li>  <li class="file"><a href="/wiki/Android/2015-10-11-adb%E5%B7%A5%E5%85%B7/">adb工具</a></li>  <li class="file"><a href="/wiki/Android/2018-06-29-Android%20APK%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B/">Android APK打包流程</a></li>  <li class="file active"><a href="/wiki/Android/2018-08-08-native%20crash%E5%88%86%E6%9E%90/">native crash 分析</a></li>  <li class="file"><a href="/wiki/Android/2018-08-08-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a></li>  <li class="file"><a href="/wiki/Android/2019-01-01-Android%20sdk%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">Android sdk目录结构</a></li>  <li class="file"><a href="/wiki/Android/2019-03-04-Apk%E5%8C%85%E4%BD%93%E7%A7%AF%E4%BC%98%E5%8C%96/">Apk包体积优化</a></li>  <li class="file"><a href="/wiki/Android/2019-03-20-Android%20support%E5%8C%85/">Android中support的使用</a></li>  <li class="file"><a href="/wiki/Android/2019-04-11-Handler%E5%8E%9F%E7%90%86/">Handler原理</a></li>  <li class="file"><a href="/wiki/Android/2019-04-15-Activity%E7%9F%A5%E8%AF%86%E7%82%B9/">Activity知识点</a></li>  <li class="file"><a href="/wiki/Android/2019-07-11-OKHttp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">OkHttp学习笔记</a></li>  <li class="file"><a href="/wiki/Android/2020-05-11-Android%E9%80%86%E5%90%91%E8%AE%B0%E5%BD%95/">Android逆向记录</a></li>  <li class="file"><a href="/wiki/Android/2020-05-12-JEB%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">JEB使用笔记</a></li>  <li class="file"><a href="/wiki/Android/2020-06-03-CoordinatorLayout/">CoordinatorLayout</a></li>  <li class="file"><a href="/wiki/Android/2020-09-09-JNI%E7%AC%94%E8%AE%B0/">JNI笔记</a></li>  <li class="file"><a href="/wiki/Android/2021-03-22-Android%E9%80%86%E5%90%91%E4%B9%8B%E8%84%B1%E5%A3%B3/">Android逆向之脱壳</a></li>  <li class="file"><a href="/wiki/Android/2021-0309-Android%E9%80%86%E5%90%91%E4%B9%8BXposed/">Android逆向之Xposed</a></li>  <li class="file"><a href="/wiki/Android/2021-04-01-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E5%88%86%E6%9E%90/">内存溢出分析</a></li>  <li class="file"><a href="/wiki/Android/2021-04-01-%E9%80%86%E5%90%91%E8%99%8E%E7%89%99Android%E7%89%88/">逆向虎牙Android版</a></li>  <li class="file"><a href="/wiki/Android/2021-04-11-Android%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BB%8F%E9%AA%8C%E8%B0%88/">Android客户端经验谈</a></li>  <li class="file"><a href="/wiki/Android/2021-04-20-%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87Android%E5%BA%94%E7%94%A8%E7%9A%84%E5%AE%89%E5%85%A8/">如何提升Android应用的安全</a></li>  <li class="file"><a href="/wiki/Android/2021-05-07-Android%E6%B5%8B%E8%AF%95%E5%AE%9E%E8%B7%B5/">Android测试实践</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Java
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Java/2016-06-06-ThreadLocal%E5%8E%9F%E7%90%86/">ThreadLocal原理</a></li>  <li class="file"><a href="/wiki/Java/2017-02-02-Java_Collections/">Java容器</a></li>  <li class="file"><a href="/wiki/Java/2017-02-02-Java_IO/">Java IO</a></li>  <li class="file"><a href="/wiki/Java/2017-02-02-Java%E7%AC%94%E8%AF%95%E9%A2%98%E6%94%B6%E9%9B%86/">Java笔试题收集</a></li>  <li class="file"><a href="/wiki/Java/2017-02-02-Java%E9%94%81/">Java锁</a></li>  <li class="file"><a href="/wiki/Java/2017-02-02-%E9%98%85%E8%AF%BBJava%E6%BA%90%E7%A0%81/">阅读Java源码</a></li>  <li class="file"><a href="/wiki/Java/2021-05-21-synchronized/">Synchronized</a></li>  <li class="file"><a href="/wiki/Java/2021-05-21-volatile/">volatile</a></li>  <li class="file"><a href="/wiki/Java/2021-05-24-HashMap/">Java中的HashMap</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具软件
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2010-11-20-Chrome%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/">Chrome插件推荐</a></li>  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2010-11-20-Firefox%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/">Firefox插件推荐</a></li>  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2010-11-20-Windows%E4%BC%98%E7%A7%80%E7%9A%84%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">Windows优秀的工具软件</a></li>  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2010-11-20-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7/">屏幕截图工具</a></li>  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2010-11-20-%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7Sublime%20Text/">文本编辑工具Sublime Text</a></li>  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2020-04-02-Alfred%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">Alfred使用技巧</a></li>  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/2021-0308-Proxifier%E4%BD%BF%E7%94%A8/">Proxifier使用</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            技术开发
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PyQt
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2018-04-29-%E5%9C%86%E5%BD%A2%E5%A4%B4%E5%83%8F/">Qt中圆形头像</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2018-11-11-QListWidget/">QListWidget</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2019-01-22-%E7%BC%96%E8%AF%91PyQt5/">编译PyQt5</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2019-01-22-%E7%BC%96%E8%AF%91QtWebEngine/">编译QtWebEngine</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2019-05-11-%E8%B5%84%E6%BA%90%E5%A4%84%E7%90%86/">资源处理</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2020-06-11-PyQt5%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/">PyQt5开发心得</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2020-07-11-%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%9E%8B/">Qt视图模型</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2020-08-16-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%84%E7%90%86/">快捷键处理</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/PyQt/2020-10-26-emoji%E8%A1%A8%E6%83%85%E5%A4%84%E7%90%86/">emoji表情处理</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            服务端
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-01-05-redis%E7%AC%94%E8%AE%B0/">Redis笔记</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-01-08-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Linux常用命令</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-02-02-Connection%20reset%20by%20peer/">Connection reset by peer) while reading response header from upstream</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-02-02-RabbitMQ%E7%AC%94%E8%AE%B0/">RabbitMQ笔记</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-03-30-MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/">MySQL知识点</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            杂项
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2015-08-08-Linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">Linux常用操作</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2015-08-08-Mac%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/">Mac软件安装笔记</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2018-07-07-Docker%E7%AC%94%E8%AE%B0/">Docker笔记</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2018-09-01-Charles%20SSL%E8%AF%81%E4%B9%A6/">Windows下Charles支持HTTPS</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2018-09-01-Git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">Git使用笔记</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2018-09-01-%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">按键精灵的使用记录</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2019-01-02-%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%9A%84%E7%8E%A9%E6%B3%95/">虚拟主机的玩法</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2019-01-29-%E5%85%B3%E4%BA%8E%E5%BB%BA%E8%AE%BE%E6%8A%80%E6%9C%AF%E5%9B%A2%E9%98%9F%E7%9A%84%E6%80%9D%E8%80%83/">关于建设技术团队的思考</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2019-05-06-ReactiveX/">ReactiveX</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2019-10-17-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">计算机网络知识总结</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2020-04-02-%E9%AB%98%E6%95%88%E7%9A%84%E4%BD%BF%E7%94%A8Mac/">高效的使用Mac</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/2020-11-19-%E5%B8%B8%E7%94%A8ffmpeg%E5%91%BD%E4%BB%A4/">FFMpeg常用命令</a></li>  <li class="file"><a href="/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/PC%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/">PC客户端技术方案分析</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            数据结构
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E5%9B%BE%EF%BC%89/">数据结构（图）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%8E%92%E5%BA%8F%EF%BC%89/">数据结构（排序）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%9F%A5%E6%89%BE%EF%BC%89/">数据结构（查找）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%EF%BC%89/">数据结构（栈和队列）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E6%A0%91%EF%BC%89/">数据结构（树）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5%E5%92%8C%E5%B9%BF%E4%B9%89%E8%A1%A8%EF%BC%89/">数据结构（稀疏矩阵和广义表）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-09-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/">数据结构（线性表）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-10-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88B%E6%A0%91%EF%BC%89/">数据结构（B树、B+树）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-10-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%A2%E9%BB%91%E6%A0%91%EF%BC%89/">数据结构（红黑树）</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2020-09-20-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91AVL%EF%BC%89/">数据结构（平衡二叉树AVL）</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            程序语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            C++
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/C++/2020-09-09-cef/">cef笔记</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/C++/2020-10-22-socket%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">socket编程笔记</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/C++/2020-10-29-C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">C语言学习笔记</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/C++/2020-11-02-C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">C++学习笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PHP
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/PHP/2020-03-02-hyperf%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"></a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/PHP/2021-02-26-PHP%E4%B8%ADopcodes%E7%9A%84%E5%8E%9F%E7%90%86/">PHP中opcodes的原理</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/PHP/2021-03-02-symfony%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">Symfony使用记录</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2018-11-11-pywin32%E6%A8%A1%E5%9D%97/">win32模块</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2018-11-11-struct%E6%A8%A1%E5%9D%97/">struct模块</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2019-05-15-Python%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/">Python多线程</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2019-05-21-ctypes/">ctypes模块</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2019-05-27-Python2%E8%B7%9FPython3%E7%9A%84%E5%8C%BA%E5%88%AB/">Pyhon2跟Python3的区别</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-06-22-RxPy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">RxPY学习笔记</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-07-27-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Python虚拟环境配置</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-07-27-pandas/">pandas</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-07-27-sqlalchemy/">sqlalchemy</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-07-27-stockstats/">stockstats</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-07-27-tornado/">tornado</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-07-27-tushare/">tushare</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-09-09-Python%20Extending/">Python扩展</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-09-09-t%20m%20p/"></a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-10-10-json%E8%A7%A3%E6%9E%90%E5%BA%93%E9%80%89%E6%8B%A9%E5%92%8C%E4%BD%BF%E7%94%A8/">json解析库选择和使用</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-10-14-Pillow/">Pillow</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/Python/2020-11-06-cffi%E7%AC%94%E8%AE%B0/">CFFI笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            iOS
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/iOS/2020-04-02-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0iOS/">开始学习iOS</a></li>  <li class="file"><a href="/wiki/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/iOS/2020-04-02-%E7%90%86%E8%A7%A3%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B/">理解打包流程</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            算法
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E7%AE%97%E6%B3%95/2020-09-09-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></li>  <li class="file"><a href="/wiki/%E7%AE%97%E6%B3%95/2020-09-09-%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">回溯算法</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            设计模式
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2021-05-28-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            读书笔记
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            深入理解计算机
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/">《深入理解计算机》读书笔记1：计算机系统漫游</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B010-%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/">《深入理解计算机》读书笔记10：系统级I/O</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">《深入理解计算机》读书笔记11：网络编程</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">《深入理解计算机》读书笔记12：并发编程</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/">《深入理解计算机》读书笔记2：信息的表示和处理</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">《深入理解计算机》读书笔记3：程序的机器级表示</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">《深入理解计算机》读书笔记3：处理器体系结构</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B05-%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/">《深入理解计算机》读书笔记5：优化程序性能</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B06-%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/">《深入理解计算机》读书笔记6：存储器层次结构</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B07-%E9%93%BE%E6%8E%A5/">《深入理解计算机》读书笔记7：链接</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B08-%E5%BC%82%E5%B8%B8%E6%B5%81%E6%8E%A7%E5%88%B6/">《深入理解计算机》读书笔记8：异常流控制</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/">《深入理解计算机》读书笔记9：虚拟内存</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2016-01-17-%E3%80%8AJava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《Java编程思想》读书笔记</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-06-12-%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《网络是如何连接的》读书笔记</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-08-10-%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《计算机是怎么跑起来的》读书笔记</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-11-22-%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/">收集的电子书</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2019-03-22-%E3%80%8AKotlin%E5%AE%9E%E6%88%98%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《Kotlin实战》读书笔记</a></li>  <li class="file"><a href="/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021-03-04-%E3%80%8A%E5%B9%B2%E5%B0%B1%E5%AF%B9%E4%BA%86%E3%80%8B/">《干就对了：业绩增长九大关键》读书笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            随笔
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E9%9A%8F%E7%AC%94/2019-10--07-%E7%81%AB%E8%BD%A6%E7%A5%A8%E9%BB%84%E7%89%9B/">火车票黄牛</a></li>  <li class="file"><a href="/wiki/%E9%9A%8F%E7%AC%94/2020-04-10-%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E3%80%8B%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95/">《大明王朝1566》经典语录</a></li>  <li class="file"><a href="/wiki/%E9%9A%8F%E7%AC%94/2021-02-01-%E5%AF%B9%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E7%90%86%E8%A7%A3/">对于服务端开发的理解</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/index/">Welcome Shjlone's Blog</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-Android/2018-08-08-native crash分析" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Android/" rel="tag">Android</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/Android/2018-08-08-native%20crash%E5%88%86%E6%9E%90/">
+            <time datetime="2021-05-29T05:42:40.120Z" itemprop="datePublished">2021-05-29</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            native crash 分析
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p><strong>Crash类型：</strong></p>
+<ul>
+<li>Framework/App Crash：Java层崩溃</li>
+<li>Native Crash：C/C++层崩溃</li>
+<li>Kernel Crash：内核崩溃</li>
+</ul>
+<h3 id="tombstone文件的组成部分："><a href="#tombstone文件的组成部分：" class="headerlink" title="tombstone文件的组成部分："></a><strong>tombstone文件的组成部分：</strong></h3><ul>
+<li>Build fingerprint</li>
+<li>Crashed process and PIDS</li>
+<li>Terminated signal and fault address</li>
+<li>CPU registers</li>
+<li>Call stack</li>
+<li>Stack content of each call</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">--logversion:utracea</span><br><span class="line">Process Name: &#x27;com.feiteng.lieyou&#x27;</span><br><span class="line">Thread Name: &#x27;RenderThread&#x27;</span><br><span class="line">pid: 25031, tid: 25237 &gt;&gt;&gt; com.feiteng.lieyou &lt;&lt;&lt;</span><br><span class="line">killed by pid: 25031, comm: .feiteng.lieyou, uid: 10125.</span><br><span class="line">signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------</span><br><span class="line">r0 00000000 r1 00006295 r2 00000006 r3 00000008</span><br><span class="line">r4 c587c978 r5 00000006 r6 c587c920 r7 0000010c</span><br><span class="line">r8 bf249bc8 r9 00000000 10 bf249bbc fp bf249bb8</span><br><span class="line">ip 00000004 sp c587c3b0 lr eba21907 pc eba24188 cpsr 20070010</span><br><span class="line">d0 0000000000000000 d1 0000000000000000</span><br><span class="line">d2 0000000000000000 d3 0000000000000000</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><b>signal指定异常类型。如果pid等于tid，则说明程序是在主线程中崩溃。</b></p>
+<p><strong>信号类型:</strong></p>
+<p>软中断信号（signal，又简称为信号）用来通知进程发生了事件。进程之间可以通过调用kill库函数发送软中断信号。Linux内核也可能给进程发送信号，通知进程发生了某个事件（例如内存越界）。</p>
+<p>信号只是用来通知某进程发生了什么事件，无法给进程传递任何数据，进程对信号的处理方法有三种：</p>
+<ol>
+<li>第一种方法是，忽略某个信号，对该信号不做任何处理，就象未发生过一样。</li>
+<li>第二种是设置中断的处理函数，收到信号后，由该函数来处理。</li>
+<li>第三种方法是，对该信号的处理采用系统的默认操作，大部分的信号的默认操作是终止进程。</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//信号监听</span></span><br><span class="line"><span class="function"><span class="keyword">sighandler_t</span> <span class="title">signal</span><span class="params">(<span class="keyword">int</span> signum, <span class="keyword">sighandler_t</span> handler)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">参数signum表示信号的编号。</span></span><br><span class="line"><span class="comment">参数handler表示信号的处理方式，有三种情况：</span></span><br><span class="line"><span class="comment">1）SIG_IGN：忽略参数signum所指的信号。</span></span><br><span class="line"><span class="comment">2）一个自定义的处理信号的函数，信号的编号为这个自定义函数的参数。</span></span><br><span class="line"><span class="comment">3）SIG_DFL：恢复参数signum所指信号的处理方法为默认值。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//发送信号</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kill</span><span class="params">(<span class="keyword">pid_t</span> pid, <span class="keyword">int</span> sig)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">kill函数将参数sig指定的信号给参数pid 指定的进程。</span></span><br><span class="line"><span class="comment">参数pid 有几种情况：</span></span><br><span class="line"><span class="comment">1）pid&gt;0 将信号传给进程号为pid 的进程。</span></span><br><span class="line"><span class="comment">2）pid=0 将信号传给和目前进程相同进程组的所有进程，常用于父进程给子进程发送信号，注意，发送信号者进程也会收到自己发出的信号。</span></span><br><span class="line"><span class="comment">3）pid=-1 将信号广播传送给系统内所有的进程，例如系统关机时，会向所有的登录窗口广播关机信息。</span></span><br><span class="line"><span class="comment">sig：准备发送的信号代码，假如其值为零则没有任何信号送出，但是系统会执行错误检查，通常会利用sig值为零来检验某个进程是否仍在运行。</span></span><br><span class="line"><span class="comment">返回值说明： 成功执行时，返回0；失败返回-1，errno被设为以下的某个值。</span></span><br><span class="line"><span class="comment">EINVAL：指定的信号码无效（参数 sig 不合法）。</span></span><br><span class="line"><span class="comment">EPERM：权限不够无法传送信号给指定进程。</span></span><br><span class="line"><span class="comment">ESRCH：参数 pid 所指定的进程或进程组不存在。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGHUP 1  <span class="comment">// 终端连接结束时发出(不管正常或非正常)</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGINT 2  <span class="comment">// 程序终止(例如Ctrl-C)</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGQUIT 3 <span class="comment">// 程序退出(Ctrl-\)</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGILL 4 <span class="comment">// 执行了非法指令，或者试图执行数据段，堆栈溢出</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGTRAP 5 <span class="comment">// 断点时产生，由debugger使用</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGABRT 6 <span class="comment">// 调用abort函数生成的信号，表示程序异常</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGIOT 6 <span class="comment">// 同上，更全，IO异常也会发出</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGBUS 7 <span class="comment">// 非法地址，包括内存地址对齐出错，比如访问一个4字节的整数, 但其地址不是4的倍数</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGFPE 8 <span class="comment">// 计算错误，比如除0、溢出</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGKILL 9 <span class="comment">// 强制结束程序，具有最高优先级，本信号不能被阻塞、处理和忽略</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGUSR1 10 <span class="comment">// 未使用，保留</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGSEGV 11 <span class="comment">// 非法内存操作，与SIGBUS不同，他是对合法地址的非法访问，比如访问没有读权限的内存，向没有写权限的地址写数据</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGUSR2 12 <span class="comment">// 未使用，保留</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGPIPE 13 <span class="comment">// 管道破裂，通常在进程间通信产生</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGALRM 14 <span class="comment">// 定时信号,</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGTERM 15 <span class="comment">// 结束程序，类似温和的SIGKILL，可被阻塞和处理。通常程序如果终止不了，才会尝试SIGKILL</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGSTKFLT 16  <span class="comment">// 协处理器堆栈错误</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGCHLD 17 <span class="comment">// 子进程结束时, 父进程会收到这个信号。</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGCONT 18 <span class="comment">// 让一个停止的进程继续执行</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGSTOP 19 <span class="comment">// 停止进程,本信号不能被阻塞,处理或忽略</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGTSTP 20 <span class="comment">// 停止进程,但该信号可以被处理和忽略</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGTTIN 21 <span class="comment">// 当后台作业要从用户终端读数据时, 该作业中的所有进程会收到SIGTTIN信号</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGTTOU 22 <span class="comment">// 类似于SIGTTIN, 但在写终端时收到</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGURG 23 <span class="comment">// 有紧急数据或out-of-band数据到达socket时产生</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGXCPU 24 <span class="comment">// 超过CPU时间资源限制时发出</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGXFSZ 25 <span class="comment">// 当进程企图扩大文件以至于超过文件大小资源限制</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGVTALRM 26 <span class="comment">// 虚拟时钟信号. 类似于SIGALRM, 但是计算的是该进程占用的CPU时间.</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGPROF 27 <span class="comment">// 类似于SIGALRM/SIGVTALRM, 但包括该进程用的CPU时间以及系统调用的时间</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGWINCH 28 <span class="comment">// 窗口大小改变时发出</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGIO 29 <span class="comment">// 文件描述符准备就绪, 可以开始进行输入/输出操作</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGPOLL SIGIO <span class="comment">// 同上，别称</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGPWR 30 <span class="comment">// 电源异常</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIGSYS 31 <span class="comment">// 非法的系统调用</span></span></span><br></pre></td></tr></table></figure>
+
+<p>tombstone 文件位于路径 /data/tombstones/下</p>
+<p><strong>调用栈信息</strong></p>
+<p>调用栈信息是分析程序崩溃的非常重要的一个信息，它主要记录了程序在 Crash 前的函数调用关系以及当前正在执行函数的信息，它对应的是我们 tombstone 文件中 backtrace 符号开始的信息，上面例子中的 backtrace 的信息如下所示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">backtrace:</span><br><span class="line">    #00 pc 00006639  /system/lib/libui.so (android::Fence::waitForever(char const*)+41)</span><br><span class="line">    #01 pc 00034b86  /system/lib/libsurfaceflinger.so</span><br><span class="line">    #02 pc 0003229e  /system/lib/libsurfaceflinger.so</span><br><span class="line">    #03 pc 0002cb9c  /system/lib/libgui.so (android::BufferQueue::ProxyConsumerListener::onFrameAvailable(android::BufferItem const&amp;)+652)</span><br><span class="line">    #04 pc 000342f4  /system/lib/libgui.so (android::BufferQueueProducer::queueBuffer(int, android::IGraphicBufferProducer::QueueBufferInput const&amp;, android::IGraphicBufferProducer::QueueBufferOutput*)+2580)</span><br><span class="line"></span><br><span class="line">    ##00 等表示函数调用栈中栈帧的编号</span><br><span class="line">    pc 后面的16进制数表示当前函数正在执行语句在共享链接库或可执行文件的位置</span><br><span class="line">    最后一行表示当前指令在哪个文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何定位崩溃位置"><a href="#如何定位崩溃位置" class="headerlink" title="如何定位崩溃位置"></a>如何定位崩溃位置</h3><h4 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h4><p><strong>nm</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看动态库的符号表</span><br><span class="line">nm -D libName.so | grep symbel symbolName</span><br></pre></td></tr></table></figure>
+
+<p><strong>addr2line</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Usage: /Users/loneqd/Android/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-addr2line [option(s)] [addr(s)]</span><br><span class="line"> Convert addresses into line number/file name pairs.</span><br><span class="line"> If no addresses are specified on the command line, they will be read from stdin</span><br><span class="line"> The options are:</span><br><span class="line">  @&lt;file&gt;                Read options from &lt;file&gt;</span><br><span class="line">  -a --addresses         Show addresses</span><br><span class="line">  -b --target=&lt;bfdname&gt;  Set the binary file format</span><br><span class="line">  -e --exe=&lt;executable&gt;  Set the input file name (default is a.out)</span><br><span class="line">  -i --inlines           Unwind inlined functions</span><br><span class="line">  -j --section=&lt;name&gt;    Read section-relative offsets instead of addresses</span><br><span class="line">  -p --pretty-print      Make the output easier to read for humans</span><br><span class="line">  -s --basenames         Strip directory names</span><br><span class="line">  -f --functions         Show function names</span><br><span class="line">  -C --demangle[=style]  Demangle function names</span><br><span class="line">  -h --help              Display this information</span><br><span class="line">  -v --version           Display the program&#x27;s version</span><br><span class="line"></span><br><span class="line">实例：(需使用带symbol的动态库)</span><br><span class="line">addr2line -f -e libui.so 00006639 _ZN7android5Fence11waitForeverE  </span><br></pre></td></tr></table></figure>
+
+
+
+
+<p><strong>ndk-stack</strong></p>
+<p>将崩溃时的调用内存地址和C++代码对应起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">usage: ndk-stack.py [-h] -sym SYMBOL_DIR [-i INPUT]</span><br><span class="line"></span><br><span class="line">Symbolizes Android crashes.</span><br><span class="line"></span><br><span class="line">optional arguments:</span><br><span class="line">  -h, --help            show this help message and exit</span><br><span class="line">  -sym SYMBOL_DIR, --sym SYMBOL_DIR</span><br><span class="line">                        directory containing unstripped .so files</span><br><span class="line">  -i INPUT, -dump INPUT, --dump INPUT</span><br><span class="line">                        input filename</span><br><span class="line"></span><br><span class="line">See &lt;https://developer.android.com/ndk/guides/ndk-stack&gt;.</span><br><span class="line"></span><br><span class="line">sym指项目编译成功之后，obj目录</span><br><span class="line">dump指崩溃文件</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="xCrash的使用"><a href="#xCrash的使用" class="headerlink" title="xCrash的使用"></a>xCrash的使用</h3><ul>
+<li><a href="https://github.com/iqiyi/xCrash" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/iqiyi/xCrash</a></li>
+</ul>
+<p>native异常日志文件的格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">日志分为：</span><br><span class="line">    头部信息（为应用的基本信息）</span><br><span class="line">    异常信号部分。（哪个异常信号导致异常，信号参见Linux信号）</span><br><span class="line">    backtrace</span><br><span class="line">    so库的编译信息，build id</span><br><span class="line">    堆栈信息</span><br><span class="line">    内存信息</span><br><span class="line">    内存映射</span><br><span class="line">    logcat日志输出部分，包括main,system,event</span><br><span class="line">    app应用进程打开的文件描述符</span><br><span class="line">    内存信息</span><br><span class="line">    app应用进程信息</span><br><span class="line">    异常回调填充信息</span><br></pre></td></tr></table></figure>
+
+<p>一般根据backtrace，再使用addr2line命令定位具体的错误代码位置。</p>
+<br>
+
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://gityuan.com/2016/06/25/android-native-crash/" rel="external nofollow noopener noreferrer" target="_blank">http://gityuan.com/2016/06/25/android-native-crash/</a></li>
+<li><a href="https://toutiao.io/posts/jflx6c/preview" rel="external nofollow noopener noreferrer" target="_blank">https://toutiao.io/posts/jflx6c/preview</a></li>
+<li><a href="https://source.android.google.cn/devices/tech/debug/native-crash?hl=zh-cn" rel="external nofollow noopener noreferrer" target="_blank">https://source.android.google.cn/devices/tech/debug/native-crash?hl=zh-cn</a></li>
+<li><a href="http://www.droidsec.cn/%E5%B8%B8%E8%A7%81android-native%E5%B4%A9%E6%BA%83%E5%8F%8A%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0/" rel="external nofollow noopener noreferrer" target="_blank">http://www.droidsec.cn/%E5%B8%B8%E8%A7%81android-native%E5%B4%A9%E6%BA%83%E5%8F%8A%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0/</a></li>
+<li><a href="https://github.com/iqiyi/xCrash" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/iqiyi/xCrash</a></li>
+<li><a href="https://source.android.com/devices/tech/debug" rel="external nofollow noopener noreferrer" target="_blank">https://source.android.com/devices/tech/debug</a></li>
+<li><a href="https://blog.csdn.net/cxmfzu/article/details/102624295" rel="external nofollow noopener noreferrer" target="_blank">xCrash日志文件格式</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/Android/2018-06-29-Android%20APK%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Android APK打包流程
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/Android/2014-05-06-Android%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Android资料整理</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            shjlone &copy; 2021 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | 
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"><span id="busuanzi_value_site_uv"></span></i></span>
+            
+        </div>
+    </div>
+</footer>
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

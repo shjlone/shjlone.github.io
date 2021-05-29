@@ -6,7 +6,7 @@
   <link href="http://shjlone.github.io/atom.xml" rel="self"/>
   
   <link href="http://shjlone.github.io/"/>
-  <updated>2021-05-29T05:43:49.960Z</updated>
+  <updated>2021-05-29T05:43:49.959Z</updated>
   <id>http://shjlone.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《计算机是怎么跑起来的》读书笔记</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-08-10-%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-08-10-%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-05-29T05:43:49.959Z</published>
+    <updated>2021-05-29T05:43:49.959Z</updated>
+    
+    <content type="html"><![CDATA[<p>计算机三个根本性基础：</p><ol><li>计算机是执行输入、运算、输出的机器；</li><li>程序是指令和数据的集合；</li><li>计算机的处理方式有时与人们的思维习惯不同。</li></ol><p>计算机的硬件由大量集成电路组成。每块集成电路上都带有许多引脚。这些引脚有些用于输入，有些用于输出。</p><p>时钟发生器</p><p>操作数：操作数笔试是已存储在CPU寄存器中的数字。<br>操作码</p><p>机器语言是唯一一种cpu能直接理解的编程语言。</p><p>CPU内部存储数据的地方也具备对数据进行计算的能力。有些寄存器中存储着接下来要执行的指令的地址。程序就是依靠着不断变花的寄存器的值运行起来的。</p><p>cpu信息<br>cpu的种类：不同的CPU对于二进制的理解是不一样的。<br>时钟信号的频率：时钟发生器发送给cpu的电信号的频率。表示时钟信号频率的单位是MHz（兆赫兹=100万回/秒）。时钟信号是在0和1之间反复变换的电信号。通常把发出一次滴答的时间称作一个时钟周期。</p><p>内存信息<br>地址空间<br>每个地址中可以存储多少比特的信息</p><p>I/O信息<br>I/O的种类<br>地址空间<br>连接着何种周边设备</p><p>最低限度所需的流程图符号</p><p>网卡地址前半部分表示生产商，后半部分表示编号。</p><p>子网掩码的作用是标识出在32比特的IP地址中，从哪一位到哪一位是网络地址，从哪一位到哪一位是主机地址。<br>255.255.255.240用二进制表示：<br>11111111.11111111.11111111.11110000<br>值为1的那些位对应着IP地址中的网络地址，后面为0的那些则对应着主机地址。</p><p>DHCP：Dynamic Host Configuration Protocol 动态主机设置协议</p><p>tracert</p><p>ARP：Address Resolution Protocol，地址解析协议，用于实现由IP地址到MAC地址的转换<br>arp -a    查询apr缓存表</p><p>硬件商发送数据的是网卡，网卡之上是设备驱动程序，之上是实现了IP协议的程序，之上是实现了TCP协议的程序，再之上才是应用程序。<br>TCP协议使用“TCP端口号”的数字识别上层的应用程序。TCP端口中有一些是预先定义好的，比如Web使用80端口，电子邮件使用25端口（用于发送）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;计算机三个根本性基础：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算机是执行输入、运算、输出的机器；&lt;/li&gt;
+&lt;li&gt;程序是指令和数据的集合；&lt;/li&gt;
+&lt;li&gt;计算机的处理方式有时与人们的思维习惯不同。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;计算机的硬件由大量集成电路组成。每块集成电路上都带有</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收集的电子书</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-11-22-%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-11-22-%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/</id>
+    <published>2021-05-29T05:43:49.959Z</published>
+    <updated>2021-05-29T05:43:49.959Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>如何阅读一本书</li></ul><p><strong>ActionScript、Flex</strong></p><ul><li>Actionscript 3 image effects</li><li>ActionScript 3</li><li>ActionScript Graphing Cookbook</li><li>ActionScript</li><li>ActionScript大型网页游戏开发</li><li>AdvancED ActionScript Animation动画高级编程</li><li>AdvancED Game Design with Flash</li><li>air_buildingapps</li><li>Flash Cinematic Techniques</li><li>Flash Game Development by Example</li><li>Flex4权威指南</li><li>FLEX企业应用开发实战</li><li>Foundation Game Design with Flash</li><li>FriendsofED</li><li>The Essential Guide to Flash Games(flash游戏编程指南)</li><li>优化Flash性能</li><li>AIR_Android应用开发实战</li><li>Developing Android Applications with Flex 4</li><li>Flash+Flex+Air移动开发入门经典</li><li>mobile-encoding-android-v2_7</li><li>Packt Publishing Flash Development for Android Cookbook (2011)</li><li>使用Flex4</li><li>ABCStructure</li><li>amf0_spec_121207</li><li>amf3_spec_121207</li><li>avm2overview</li><li>swf_file_format_spec_v10</li><li>video_file_format_spec_v10_1</li></ul><br/><p><strong>Android</strong></p><ul><li>Android 4高级编程(第3版)</li><li>Android Developer Tools Essentials</li><li>Android Native Development Kit Cookbook</li><li>Android内核剖析(完整版)</li><li>Android多媒体开发高级编程</li><li>Android应用开发详解</li><li>Android开发精要</li><li>ANDROID框架揭秘</li><li>Android系统源代码情景分析</li><li>Android软件安全与逆向分析</li><li>Dalvik-Bytecode</li><li>embedded_android</li><li>Fragments for All Presentation</li><li>Google Android SDK开发范例大全(第3版)</li><li>Groovy in Action</li><li>Groovy中文教程</li><li>Kotlin in Action</li><li>kotlin-for-android-developers-zh</li><li>Kotlin官方参考文档中文版</li><li>Practical</li><li>practical_android_4_games_development</li><li>Smashing_Android_UI</li><li>The Busy Coder’s Guide to Android Development, Version 4</li><li>[Gradle</li><li>[www</li><li>深入理解Android(卷2)</li><li>深入理解android</li><li>疯狂Android讲义</li><li>精通Android3</li></ul><br/><p><strong>C#</strong></p><ul><li>C#入门经典第5版中文高清版</li><li>C#高级编程(中文第七版)</li></ul><br/><p><strong>C、C++</strong></p><ul><li>Accelerated C++中文版</li><li>Andrew Koenig：C 陷阱与缺陷@2002 (扫描版)</li><li>An_Introduction_to_GCC_中文</li><li>c++  Primer 第5版</li><li>C+++GUI+QT3编程_11774607</li><li>C++STL标准程序库开发指南 PDF电子书下载 带书签目录</li><li>C++标准程序库</li><li>C++模板元编程</li><li>C++沉思录(Ruminations on C++)中文第2版</li><li>C++程序设计原理与实践(中文完整版)</li><li>C++编程规范-101条规则准则与最佳实践</li><li>C++语言的设计和演化</li><li>C专家编程</li><li>C和指针(第二版)高清全版469页</li><li>C程序设计(第四版)谭浩强</li><li>C程序设计语言(第2版_新版)</li><li>C程序设计语言(第2版_新版)习题解答</li><li>C程序设计语言(第2版_新版)非扫描版&amp;详细书签版</li><li>C语言入门经典(第四版)</li><li>C语言范例开发大全</li><li>Effective C   中文版第三版 高清PDF</li><li>Effective STL 中文版</li><li>Essential C++中文版</li><li>Head</li><li>STL源码剖析简体中文完整版(清晰扫描带目录)</li><li>你必须知道的495个C语言问题</li><li>像计算机科学家一样思考C++</li><li>嗨翻C语言_13421426(jb51</li><li>易学C++</li></ul><br/><p><strong>English</strong></p><ul><li>无敌初中必考语法</li><li>新编英语语法教程+学生用书+第5版_PDF</li><li>无敌英语语法：全范围</li></ul><br/><p><strong>History</strong></p><ul><li><p>乔治·奥威尔：一九八四</p></li><li><p>何清涟：现代化的陷阱</p></li><li><p>吴思：潜规则——中国历史中的真实游戏</p></li><li><p>吴思：血酬定律——中国历史中的生存游戏</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (上)</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (下)</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (中)</p></li><li><p>学会提问-批判性思维指南</p></li><li><p>弗洛伊德：梦的解析</p></li><li><p>弗洛伊德：精神分析引论</p></li><li><p>徐中约《中国近代史》（PDF-港版完整无删减）上</p></li><li><p>徐中约《中国近代史》（PDF-港版完整无删减）下</p></li><li><p>斯科特·派克：少有人走的路</p></li><li><p>罗伯特·西奥迪尼：影响力</p></li><li><p>金观涛 &amp; 刘青峰：兴盛与危机——论中国社会超稳定结构</p></li><li><p>阿利安：亚历山大远征记</p></li><li><p>高华：在历史的风陵渡口</p></li><li><p>黄仁宇：中国大历史</p></li><li><p>剑桥中国历史</p><ul><li>中华人民共和国史 (上卷 扫描版)</li><li>明史 (扫描版)</li><li>晚清史 (上卷 扫描版)</li><li>晚清史 (下卷 扫描版)</li><li>民国史 (上卷 扫描版)</li><li>民国史 (下卷 扫描版)</li><li>秦汉史 (扫描版)</li><li>辽西夏金元史 (扫描版)</li><li>隋唐史 (扫描版)</li></ul></li></ul><br/><p><strong>iOS</strong></p><ul><li>AppDistributionGuide</li><li>Effective Objective-C 2</li><li>iOS应用逆向工程 分析与实战</li><li>iOS编程+第4版</li><li>Objective C 编程之道</li><li>Objective C程序设计</li><li>Objective-C编程全解 第3版</li><li>Objective-C高级编程 iOS与OS X多线程和内存管理</li><li>OSX与iOS内核编程</li></ul><br/><p><strong>Java</strong></p><ul><li>advancedservletsjsp</li><li>Effective Enterprise Java(Chinese)</li><li>Head First Servlets and JSP  中文版  第2版</li><li>Head First Servlets and JSP 2nd</li><li>Head First Web设计 (中文版)</li><li>JAVA并发编程实践（中文）</li><li>Java并发编程实践（英文版）</li><li>Java本地接口(JNI)编程指南和规范2</li><li>JAVA案例开发集锦</li><li>Java编程思想_第4版_中文完整版</li><li>Java虚拟机规范中文版</li><li>Java迷题</li><li>JAVA面试题解惑系列</li><li>servlet-2_5-mrel2-spec</li><li>Think In Java 4完美高清中文版</li><li>《Java网络编程(第4版)》</li><li>深入浅出数据分析（美）米尔顿著</li><li>Effective Java（第2版）</li></ul><br/><p><strong>Javascript</strong></p><ul><li>HTML5高级程序设计</li><li>javascript dom 编程艺术</li><li>JavaScript权威指南(第6版)(中文版)</li><li>JavaScript高级程序设计(中文)-第3版</li></ul><br/><p><strong>kinect</strong></p><ul><li>51CTO下载-kinect应用开发实战（全书）</li><li>Kinect人机交互开发实践</li></ul><br/><p><strong>Linux</strong></p><ul><li>bash Cookbook Solutions and Examples for bash Users</li><li>Linux Shell Scripting Cookbook 2nd Edition May 2013</li><li>Linux 与 UNIX Shell 编程指南</li><li>Linux</li><li>linux内核源代码情景分析(上)</li><li>linux内核源代码情景分析(下)</li><li>Linux命令行与Shell脚本编程大全 第2版</li><li>Understanding The Linux Kernel</li><li>UNIX操作系统基础使用手册</li><li>精通UNIXShell脚本编程</li><li>高级Bash脚本编程指南(Advanced Bash-Scripting</li><li>鸟哥的Linux私房菜服务器架设篇(第三版)</li></ul><br/><p><strong>Music</strong></p><ul><li>五线谱入门</li><li>基本乐理</li></ul><br/><p><strong>PHP</strong></p><ul><li>PHP和MySQL</li><li>PHP开发实战1200例</li><li>symfony权威指南</li><li>深入PHP面向对象模式与实践</li><li>白帽子讲 Web 安全</li><li>高性能mysql第三版 </li><li>PHP核心技术与最佳实践</li><li>PHP内核剖析</li><li>深入理解PHP内核</li></ul><br/><p><strong>Python</strong></p><ul><li>Beginning Game Development with Python and Pygame</li><li>Dive into Python</li><li>Effective</li><li>Expert Python Programming(2nd)</li><li>make game with python &amp; pyGame</li><li>Python 3</li><li>Python Cookbook</li><li>Python参考手册(第4版)</li><li>Python基础教程(第2版)</li><li>python标准库中文版PDF(带章节书签)</li><li>Python核心编程第二版-习题答案</li><li>Python源码剖析</li><li>Python灰帽子 黑客与逆向工程师的Python编程之道</li><li>Python灰帽子：黑客与逆向工程师的Python编程之道(英文版)</li><li>The Django Book 2</li><li>The Python Standard Library by Example</li><li>深入学习Python 3</li><li>编写高质量代码 改善Python程序的91个建议</li></ul><br/><p><strong>Qt</strong></p><ul><li>C++  Qt设计模式（第2版）</li><li>QmlBook-In-Chinese</li><li>Qt Creator快速入门</li><li>Qt Quick核心编程 13678855</li><li>Qt5开发及实例</li><li>Qt及Qt Quick开发实战精解</li><li>QT学习之路(全)</li><li>QT高级编程_chs</li><li>the_art_of_building_qt_applications</li><li>《C++设计模式–基于Qt4开源跨平台开发框架》</li></ul><br/><p><strong>PyQt</strong></p><ul><li>pyqt-book</li><li>PyQt5 tutorial</li><li>pyqt5__pythonGui入门教程</li><li>PyQt5入门</li><li>Rapid GUI Programming with Python and Qt</li></ul><p><strong>Temp</strong></p><ul><li>51CTO下载-ffmpeg教程</li><li>CMake Practice</li><li>design-patterns</li><li>FFMPEG教程完美排版</li><li>GarageBand使用指南</li><li>growth全栈增长工程师指南</li><li>InstallationGuide</li><li>kotlin-in-action-in-chinese</li><li>OpenSL_ES_Specification_1</li><li>SDL+GUIDE+中文译本</li><li>SWIGDocumentation</li><li>TCP-IP详解(卷一、二、三)</li><li>Wireshark 数据包分析实战(第2版)最新中文版</li><li>Wireshark 数据包分析实战详解</li><li>《图解TCP IP(第5版)》</li><li>图解设计模式</li><li>程序是怎样跑起来的_PDF电子书下载 带书签目录 高清完整版</li><li>网络是怎样连接的</li><li>计算机是怎样跑起来的</li><li>设计模式</li><li>设计模式之禅(完整高清版)</li><li>Java加密与解密的艺术</li><li>一个证券分析师的醒悟 张化桥的股市真话</li><li>游戏之旅-我的编程感悟</li><li>游戏设计-原理与实践</li><li>荣辱二十年-我的股市人生</li><li>计算机程序的构造和解释</li></ul><br/><p><strong>产品、设计、思想</strong></p><ul><li>A Pattern Language</li><li>Head First 设计模式</li><li>Java与模式</li><li>Java夜未眠</li><li>java设计模式</li><li>人件（原书第3版）</li><li>人月神话</li><li>代码之美</li><li>你的灯亮着吗</li><li>启示录：打造用户喜爱的产品（英文）</li><li>大话设计模式</li><li>学会提问-批判性思维指南</li><li>建筑的永恒之道</li><li>数据结构经典问题和算法分析</li><li>浪潮之巅</li><li>漫谈设计模式</li><li>编码的奥秘</li><li>设计心理学</li><li>设计模式-可复用面向对象软件的基础</li><li>设计模式精解</li><li>设计模式：Java语言中的应用</li><li>高效程序的奥秘</li><li>黑客与画家 硅谷创业之父Paul Graham文集</li></ul><br/><p><strong>产品经理</strong></p><ul><li>互联网产品经理改变世界</li><li>产品经理手册  第3版</li><li>产品经理方法论</li><li>区块链将如何改变世界</li><li>用户体验要素</li><li>用户体验面面观-方法、工具与实践</li></ul><br/><p><strong>德州扑克</strong></p><ul><li>let there be range(中文)</li><li>加注的优势：当今锦标赛激进策略</li><li>哈灵顿在现金上2中文版</li><li>扑克蓝图</li></ul><br/><p><strong>摄影</strong></p><ul><li>数码单反摄影从入门到精通第一卷</li><li>美国纽约摄影学院摄影教材</li></ul><br/><p><strong>服务端</strong></p><ul><li>docker_practice</li><li>Docker从入门到实践</li><li>PHP-Debug-Manual-public</li><li>Redis开发运维实践指南</li><li>Redis源代码分析</li><li>云计算架构技术与实践</li><li>亿级流量网站架构核心技术</li><li>伊甸园之河</li><li>大型网站技术架构核心原理与案例分析</li><li>实用负载均衡技术网站性能优化攻略</li><li>极客与团队</li><li>深入分布式缓存从原理到实践</li><li>精通正则表达式</li><li>软件架构设计</li><li>高扩展性网站的50条原则</li></ul><br/><p><strong>算法、数据结构</strong></p><ul><li>《大话数据结构》 程杰</li><li>程序员实用算法</li><li>算法之道</li><li>算法导论(第二版)习题答案(英文版)</li><li>算法导论</li></ul><br/><p><strong>管理</strong></p><ul><li>MBA教不了的创富课</li></ul><br/><p><strong>股票</strong></p><ul><li>与庄共舞（股票实战操作）</li><li>从零开始学炒股</li><li>价值投资系列之25《上市公司财报解读》</li><li>你不知道的中国股事那些事(高清)</li><li>投资正途</li><li>日本蜡烛图技术</li><li>江恩投资几何学原理</li><li>江恩测市法则（经典之作）</li><li>海龟交易法则</li><li>看盘细节(精选)</li><li>看盘细节</li><li>短线炒股就这几招（操盘必读）</li><li>短线点金：揭开市场的底牌</li><li>短线点金：破解股价的运行轨迹</li><li>短线点金：道破股价涨跌之玄机</li><li>缠中说禅《教你炒股票》1-108课图文全版</li><li>缠论解析  缠中说禅技术理论图解(清晰版)</li><li>聪明的投资者（高质量）</li><li>胡立阳股票投资100招（清晰）</li><li>证券市场基础知识</li><li>【投资艺术】作者：查尔斯 艾里斯</li><li>巴菲特教你读财报</li><li>股票作手回忆录</li><li>超越金融  索罗斯的哲学   (美)乔治·索罗斯   2</li><li>金融炼金术(高质量）</li><li>高胜算操盘</li><li>股市操练大全12345</li></ul><br/><p><strong>计算机基础</strong></p><ul><li>深入理解计算机系统(原书第2版)</li><li>编译、链接、装载</li><li>程序员的自我修养—链接、装载与库</li><li>linker and loader</li><li>现代编译原理：Ｃ语言描述</li><li>编译原理及实践</li><li>编译原理基础</li><li>编译原理（龙书）中文版</li><li>编译原理及实践</li></ul><br/><p><strong>音视频相关</strong></p><ul><li>FFmpeg Tutorial</li><li>FFmpegBasics</li><li>ffmpeg基础库编程开发</li><li>OpenCV 2 计算机视觉编程手册_中文版</li><li>学习OpenCV</li></ul><br/><p><strong>项目管理</strong></p><ul><li>Project 2016项目管理自学经典_王菁_清华大学_2016</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;如何阅读一本书&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ActionScript、Flex&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Actionscript 3 image effects&lt;/li&gt;
+&lt;li&gt;ActionScript 3&lt;/li&gt;
+&lt;li</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>《Kotlin实战》读书笔记</title>
@@ -44,29 +105,46 @@
   </entry>
   
   <entry>
-    <title>《深入理解计算机》读书笔记9：虚拟内存</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</id>
-    <published>2021-05-29T05:42:40.154Z</published>
-    <updated>2021-05-29T05:53:57.015Z</updated>
+    <title>《Java编程思想》读书笔记</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2016-01-17-%E3%80%8AJava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2016-01-17-%E3%80%8AJava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-05-29T05:43:49.958Z</published>
+    <updated>2021-05-29T05:43:49.958Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>final</p><p>finally</p><p>finalize</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+    <summary type="html">&lt;p&gt;final&lt;/p&gt;
+&lt;p&gt;finally&lt;/p&gt;
+&lt;p&gt;finalize&lt;/p&gt;
+</summary>
       
     
     
     
     <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《网络是如何连接的》读书笔记</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-06-12-%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-06-12-%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-05-29T05:43:49.958Z</published>
+    <updated>2021-05-29T05:43:49.958Z</updated>
     
     
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -139,6 +217,33 @@
     
     <category term="随笔" scheme="http://shjlone.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>《深入理解计算机》读书笔记9：虚拟内存</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</id>
+    <published>2021-05-29T05:42:40.154Z</published>
+    <updated>2021-05-29T05:53:57.015Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
   </entry>
   
@@ -278,11 +383,11 @@
   </entry>
   
   <entry>
-    <title>《深入理解计算机》读书笔记12：并发编程</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</id>
+    <title>《深入理解计算机》读书笔记11：网络编程</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
     <published>2021-05-29T05:42:40.152Z</published>
-    <updated>2021-05-29T05:53:56.958Z</updated>
+    <updated>2021-05-29T05:53:56.966Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -305,11 +410,11 @@
   </entry>
   
   <entry>
-    <title>《深入理解计算机》读书笔记11：网络编程</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
+    <title>《深入理解计算机》读书笔记12：并发编程</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</id>
     <published>2021-05-29T05:42:40.152Z</published>
-    <updated>2021-05-29T05:53:56.966Z</updated>
+    <updated>2021-05-29T05:53:56.958Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -436,114 +541,6 @@
     
     
     <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Connection reset by peer) while reading response header from upstream</title>
-    <link href="http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-02-02-Connection%20reset%20by%20peer/"/>
-    <id>http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-02-02-Connection%20reset%20by%20peer/</id>
-    <published>2021-05-29T05:42:40.149Z</published>
-    <updated>2021-05-29T05:50:32.491Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题：Connection-reset-by-peer-while-reading-response-header-from-upstream"><a href="#问题：Connection-reset-by-peer-while-reading-response-header-from-upstream" class="headerlink" title="问题：Connection reset by peer) while reading response header from upstream"></a>问题：Connection reset by peer) while reading response header from upstream</h3><h4 id="描述："><a href="#描述：" class="headerlink" title="描述："></a>描述：</h4><p>某些请求一直返回<strong>502 Bad Gateway</strong>的错误，查看服务端的error日志，显示Connection reset by peer。当时的场景是一个每隔一分钟的定时脚本<br>每次运行时，获取需要处理的数据，同步请求某个服务端接口进行文件上传。猜测是这个接口请求响应很慢，一分钟后又再次请求同样的接口而出现问题。</p><h4 id="处理："><a href="#处理：" class="headerlink" title="处理："></a>处理：</h4><p>修改接口对应的逻辑，让这个接口能快速响应；此问题消失。查阅资料，Nginx的响应有几个参数设置：</p><ul><li>keepalive_timeout：设置客户端的长连接超时时间，如果超过这个时间客户端没有发起请求，则Nginx服务器会主动关闭长连接。</li><li>keepalive_requests：设置与客户端的建立的一个长连接可以处理的最大请求次数，如果超过这个值，则Nginx会主动关闭该长连接。</li></ul><p>对于此类问题，也可以尝试将keepalive_timeout的时间设置的长一些。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;问题：Connection-reset-by-peer-while-reading-response-header-from-upstream&quot;&gt;&lt;a href=&quot;#问题：Connection-reset-by-peer-while-reading-respons</summary>
-      
-    
-    
-    
-    <category term="技术开发" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="服务端" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-    
-    <category term="服务端" scheme="http://shjlone.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RabbitMQ笔记</title>
-    <link href="http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-02-02-RabbitMQ%E7%AC%94%E8%AE%B0/"/>
-    <id>http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-02-02-RabbitMQ%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-05-29T05:42:40.149Z</published>
-    <updated>2021-05-29T05:50:42.420Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h4 id="安装PHP扩展amqp"><a href="#安装PHP扩展amqp" class="headerlink" title="安装PHP扩展amqp"></a>安装PHP扩展amqp</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">PHP &lt; 7.3</span><br><span class="line"></span><br><span class="line">#install some base extensions</span><br><span class="line">RUN apt-get install -y \</span><br><span class="line">        libzip-dev \</span><br><span class="line">        zip \</span><br><span class="line">  &amp;&amp; docker-php-ext-configure zip --with-libzip \</span><br><span class="line">  &amp;&amp; docker-php-ext-install zip</span><br><span class="line"></span><br><span class="line">PHP &gt;= 7.3</span><br><span class="line"></span><br><span class="line">#install some base extensions</span><br><span class="line">RUN apt-get install -y \</span><br><span class="line">libzip-dev \</span><br><span class="line">zip \</span><br><span class="line">&amp;&amp; docker-php-ext-install zip</span><br></pre></td></tr></table></figure><h4 id="安装RabbitMQ"><a href="#安装RabbitMQ" class="headerlink" title="安装RabbitMQ"></a>安装RabbitMQ</h4><p>docker安装，使用localhost:5672访问其后台</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq:</span><br><span class="line">        image:rabbitmq:management</span><br><span class="line">        restart: always</span><br><span class="line">        environment:</span><br><span class="line">            RABBITMQ_DEFAULT_USER: &quot;root&quot;</span><br><span class="line">            RABBITMQ_DEFAULT_PASS: &quot;root&quot;</span><br><span class="line">        volumes:</span><br><span class="line">            - ./code/rabbitmq/rabbitmq:/var/lib/rabbitmq</span><br><span class="line">            - ./code/rabbitmq/log:/log/rabbitmq/log</span><br><span class="line">        ports:</span><br><span class="line">            - 15672:15672</span><br><span class="line">            - 5672:5672</span><br></pre></td></tr></table></figure><h4 id="Symfony安装扩展"><a href="#Symfony安装扩展" class="headerlink" title="Symfony安装扩展"></a>Symfony安装扩展</h4><p><a href="https://github.com/php-amqplib/RabbitMqBundle">https://github.com/php-amqplib/RabbitMqBundle</a></p><ol><li>Symfony中的composer中添加</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;php-amqplib/rabbitmq-bundle&quot;: &quot;1.14.4&quot;</span><br></pre></td></tr></table></figure><ol start="2"><li>执行更新命令</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php composer update php-amqplib/rabbitmq-bundle</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://rabbitmq.com/">https://rabbitmq.com</a></li><li><a href="https://blog.csdn.net/whoamiyang/article/details/54954780">https://blog.csdn.net/whoamiyang/article/details/54954780</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h4 id=&quot;安装PHP扩展amqp&quot;&gt;&lt;a href=&quot;#安装PHP扩展amqp&quot; class=&quot;headerlink&quot; title=&quot;安装P</summary>
-      
-    
-    
-    
-    <category term="技术开发" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="服务端" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-    
-    <category term="服务端" scheme="http://shjlone.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL知识点</title>
-    <link href="http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-03-30-MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-03-30-MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
-    <published>2021-05-29T05:42:40.149Z</published>
-    <updated>2021-05-29T05:50:42.415Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="explain-使用"><a href="#explain-使用" class="headerlink" title="explain 使用"></a>explain 使用</h2><table><thead><tr><th>列名</th><th>说明</th></tr></thead><tbody><tr><td>id</td><td>执行编号，标识select所属的行。如果在语句中没子查询或关联查询，只有唯一的select，每行都将显示1。否则，内层的select语句一般会顺序编号，对应于其在原始语句中的位置</td></tr><tr><td>select_type</td><td>显示本行是简单或复杂select。如果查询有任何复杂的子查询，则最外层标记为PRIMARY（DERIVED、UNION、UNION RESUlT）</td></tr><tr><td>table</td><td>访问引用哪个表（引用某个查询，如“derived3”）</td></tr><tr><td>type</td><td>数据访问/读取操作类型（ALL、index、range、ref、eq_ref、const/system、NULL）</td></tr><tr><td>possible_keys</td><td>揭示哪一些索引可能有利于高效的查找</td></tr><tr><td>key</td><td>显示mysql决定采用哪个索引来优化查询</td></tr><tr><td>key_len</td><td>显示mysql在索引里使用的字节数</td></tr><tr><td>ref</td><td>显示了之前的表在key列记录的索引中查找值所用的列或常量</td></tr><tr><td>rows</td><td>为了找到所需的行而需要读取的行数，估算值，不精确。通过把所有rows列值相乘，可粗略估算整个查询会检查的行数</td></tr><tr><td>Extra</td><td>额外信息，如using index、filesort等</td></tr></tbody></table><p><strong>select_type</strong></p><table><thead><tr><th>类型</th><th>说明</th></tr></thead><tbody><tr><td>simple</td><td>简单子查询，不包含子查询和union</td></tr><tr><td>primary</td><td>包含union或者子查询，最外层的部分标记为primary</td></tr><tr><td>subquery</td><td>一般子查询中的子查询被标记为subquery，也就是位于select列表中的查询</td></tr><tr><td>derived</td><td>派生表——该临时表是从子查询派生出来的，位于form中的子查询</td></tr><tr><td>union</td><td>位于union中第二个及其以后的子查询被标记为union，第一个就被标记为primary如果是union位于from中则标记为derived</td></tr><tr><td>union result</td><td>用来从匿名临时表里检索结果的select被标记为union result</td></tr><tr><td>dependent union</td><td>顾名思义，首先需要满足UNION的条件，及UNION中第二个以及后面的SELECT语句，同时该语句依赖外部的查询</td></tr><tr><td>subquery</td><td>子查询中第一个SELECT语句</td></tr><tr><td>dependent subquery</td><td>和DEPENDENT UNION相对UNION一样</td></tr></tbody></table><p><strong>type</strong></p><p>type显示的是访问类型，是较为重要的一个指标，结果值从好到坏依次是：<br>system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL ，<br>一般来说，得保证查询至少达到range级别，最好能达到ref。</p><table><thead><tr><th>类型</th><th>说明</th></tr></thead><tbody><tr><td>All</td><td>最坏的情况,全表扫描</td></tr><tr><td>index</td><td>和全表扫描一样。只是扫描表的时候按照索引次序进行而不是行。主要优点就是避免了排序, 但是开销仍然非常大。如在Extra列看到Using index，说明正在使用覆盖索引，只扫描索引的数据，它比按索引次序全表扫描的开销要小很多</td></tr><tr><td>range</td><td>范围扫描，一个有限制的索引扫描。key 列显示使用了哪个索引。当使用=、 &lt;&gt;、&gt;、&gt;=、&lt;、&lt;=、IS NULL、&lt;=&gt;、BETWEEN 或者 IN 操作符,用常量比较关键字列时,可以使用 range</td></tr><tr><td>ref</td><td>一种索引访问，它返回所有匹配某个单个值的行。此类索引访问只有当使用非唯一性索引或唯一性索引非唯一性前缀时才会发生。这个类型跟eq_ref不同的是，它用在关联操作只使用了索引的最左前缀，或者索引不是UNIQUE和PRIMARY KEY。ref可以用于使用=或&lt;=&gt;操作符的带索引的列。</td></tr><tr><td>eq_ref</td><td>最多只返回一条符合条件的记录。使用唯一性索引或主键查找时会发生 （高效）</td></tr><tr><td>const</td><td>当确定最多只会有一行匹配的时候，MySQL优化器会在查询前读取它而且只读取一次，因此非常快。当主键放入where子句时，mysql把这个查询转为一个常量（高效）</td></tr><tr><td>system</td><td>这是const连接类型的一种特例，表仅有一行满足条件。</td></tr><tr><td>Null</td><td>意味说mysql能在优化阶段分解查询语句，在执行阶段甚至用不到访问表或索引（高效）</td></tr></tbody></table><p><strong>Extra</strong></p><p>Extra是EXPLAIN输出中另外一个很重要的列，该列显示MySQL在查询过程中的一些详细信息，MySQL查询优化器执行查询的过程中对查询计划的重要补充信息。</p><table><thead><tr><th>类型</th><th>说明</th></tr></thead><tbody><tr><td>Using filesort</td><td>MySQL有两种方式可以生成有序的结果，通过排序操作或者使用索引，当Extra中出现了Using filesort 说明MySQL使用了后者，但注意虽然叫filesort但并不是说明就是用了文件来进行排序，只要可能排序都是在内存里完成的。大部分情况下利用索引排序更快，所以一般这时也要考虑优化查询了。使用文件完成排序操作，这是可能是ordery by，group by语句的结果，这可能是一个CPU密集型的过程，可以通过选择合适的索引来改进性能，用索引来为查询结果排序。</td></tr><tr><td>Using temporary</td><td>用临时表保存中间结果，常用于GROUP BY 和 ORDER BY操作中，一般看到它说明查询需要优化了，就算避免不了临时表的使用也要尽量避免硬盘临时表的使用。</td></tr><tr><td>Not exists</td><td>MYSQL优化了LEFT JOIN，一旦它找到了匹配LEFT JOIN标准的行， 就不再搜索了。</td></tr><tr><td>Using index</td><td>说明查询是覆盖了索引的，不需要读取数据文件，从索引树（索引文件）中即可获得信息。如果同时出现using where，表明索引被用来执行索引键值的查找，没有using where，表明索引用来读取数据而非执行查找动作。这是MySQL服务层完成的，但无需再回表查询记录。</td></tr><tr><td>Using index condition</td><td>这是MySQL 5.6出来的新特性，叫做“索引条件推送”。简单说一点就是MySQL原来在索引上是不能执行如like这样的操作的，但是现在可以了，这样减少了不必要的IO操作，但是只能用在二级索引上。</td></tr><tr><td>Using where</td><td>使用了WHERE从句来限制哪些行将与下一张表匹配或者是返回给用户。注意：Extra列出现Using where表示MySQL服务器将存储引擎返回服务层以后再应用WHERE条件过滤。</td></tr><tr><td>Using join buffer</td><td>使用了连接缓存：Block Nested Loop，连接算法是块嵌套循环连接;Batched Key Access，连接算法是批量索引连接</td></tr><tr><td>impossible where</td><td>where子句的值总是false，不能用来获取任何元组</td></tr><tr><td>select tables optimized away</td><td>在没有GROUP BY子句的情况下，基于索引优化MIN/MAX操作，或者对于MyISAM存储引擎优化COUNT(*)操作，不必等到执行阶段再进行计算，查询执行计划生成的阶段即完成优化。</td></tr><tr><td>distinct</td><td>优化distinct操作，在找到第一匹配的元组后即停止找同样值的动作</td></tr></tbody></table><h2 id="慢查询分析"><a href="#慢查询分析" class="headerlink" title="慢查询分析"></a>慢查询分析</h2><h3 id="查询日志设置"><a href="#查询日志设置" class="headerlink" title="查询日志设置"></a>查询日志设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">show variables like &#x27;general_log&#x27;; #查询是否开启查询日志</span><br><span class="line">set global general_log = on; # 开启查询日志</span><br><span class="line">show variables like &#x27;log_output&#x27;; # 查看日志写入类型</span><br><span class="line">set global log_output = &#x27;table&#x27;; #修改日志写入类型</span><br><span class="line">select *</span><br><span class="line">from mysql.slow_log</span><br><span class="line">limit 100; # 慢查询日志记录表</span><br></pre></td></tr></table></figure><p>mysql.slow_log 表字段意义</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">query_time：       SQL语句的查询时间(在 MySQL 中所有类型的 SQL 语句执行的时间都叫做 query_time,而在 Oracle 中则仅指 select)</span><br><span class="line">lock_time:         锁的时间</span><br><span class="line">rows_sent:         返回了多少行,如果做了聚合就不准确了</span><br><span class="line">rows_examined:     #执行这条 SQL 处理了多少行数据</span><br><span class="line">db:                使用了哪个数据库</span><br><span class="line">sql_text：         执行的sql语句</span><br></pre></td></tr></table></figure><h2 id="存疑的点"><a href="#存疑的点" class="headerlink" title="存疑的点"></a>存疑的点</h2><ul><li>什么情况下需要开启查询缓存？</li></ul><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;explain-使用&quot;&gt;&lt;a href=&quot;#explain-使用&quot; class=&quot;headerlink&quot; title=&quot;explain 使用&quot;&gt;&lt;/a&gt;explain 使用&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;列名&lt;/th&gt;
-&lt;th&gt;说明&lt;/</summary>
-      
-    
-    
-    
-    <category term="技术开发" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="服务端" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-    
-    <category term="服务端" scheme="http://shjlone.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux常用命令</title>
-    <link href="http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-01-08-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/2021-01-08-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2021-05-29T05:42:40.148Z</published>
-    <updated>2021-05-29T05:50:26.542Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="grep常用命令"><a href="#grep常用命令" class="headerlink" title="grep常用命令"></a>grep常用命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 查找进程中所有跟nginx匹配的</span><br><span class="line">ps -ef | grep nginx</span><br><span class="line"></span><br><span class="line"># 查看进程数</span><br><span class="line">ps -ef | grep nginx -c </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 搜索某个文件夹下，哪些文件包含关键字</span><br><span class="line">grep -r &quot;关键字&quot; 文件夹</span><br><span class="line"></span><br><span class="line"># 根据字符串搜索</span><br><span class="line">grep “被查找的字符串” 文件名 </span><br><span class="line"></span><br><span class="line"># 根据正则搜索</span><br><span class="line">grep –e “正则表达式” 文件名</span><br><span class="line"></span><br><span class="line"># 搜索不区分大小写</span><br><span class="line">grep –i “被查找的字符串” 文件名</span><br><span class="line"></span><br><span class="line"># 显示搜索出来的信息所在的行数</span><br><span class="line">grep -c “被查找的字符串” 文件名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="find常用命令"><a href="#find常用命令" class="headerlink" title="find常用命令"></a>find常用命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前目录下所有php文件</span><br><span class="line">find . &quot;*.php&quot;</span><br><span class="line">find . -name &quot;*.php&quot;</span><br><span class="line"></span><br><span class="line"># 查找当前目录下，最近120分钟修改过的文件</span><br><span class="line">find . -mmin -120</span><br><span class="line"></span><br><span class="line"># 查看当前目录下，是否有名字叫“通讯录”的文件夹，-type：表示设定类型，d表示文件夹类型，可以替换为f(普通文件)、l(链接文件)</span><br><span class="line">find . -type d -name 通讯录</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;grep常用命令&quot;&gt;&lt;a href=&quot;#grep常用命令&quot; class=&quot;headerlink&quot; title=&quot;grep常用命令&quot;&gt;&lt;/a&gt;grep常用命令&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t</summary>
-      
-    
-    
-    
-    <category term="技术开发" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="服务端" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    
-    
-    <category term="服务端" scheme="http://shjlone.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
     
   </entry>
   
