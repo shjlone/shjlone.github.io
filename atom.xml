@@ -6,7 +6,7 @@
   <link href="http://shjlone.github.io/atom.xml" rel="self"/>
   
   <link href="http://shjlone.github.io/"/>
-  <updated>2021-05-29T05:43:49.959Z</updated>
+  <updated>2021-05-31T06:02:20.976Z</updated>
   <id>http://shjlone.github.io/</id>
   
   <author>
@@ -17,190 +17,92 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>《计算机是怎么跑起来的》读书笔记</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-08-10-%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-08-10-%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-05-29T05:43:49.959Z</published>
-    <updated>2021-05-29T05:43:49.959Z</updated>
+    <title>Android APK打包流程</title>
+    <link href="http://shjlone.github.io/wiki/Android/Android%20APK%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B/"/>
+    <id>http://shjlone.github.io/wiki/Android/Android%20APK%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B/</id>
+    <published>2021-05-31T01:33:33.494Z</published>
+    <updated>2021-05-31T06:02:20.976Z</updated>
     
-    <content type="html"><![CDATA[<p>计算机三个根本性基础：</p><ol><li>计算机是执行输入、运算、输出的机器；</li><li>程序是指令和数据的集合；</li><li>计算机的处理方式有时与人们的思维习惯不同。</li></ol><p>计算机的硬件由大量集成电路组成。每块集成电路上都带有许多引脚。这些引脚有些用于输入，有些用于输出。</p><p>时钟发生器</p><p>操作数：操作数笔试是已存储在CPU寄存器中的数字。<br>操作码</p><p>机器语言是唯一一种cpu能直接理解的编程语言。</p><p>CPU内部存储数据的地方也具备对数据进行计算的能力。有些寄存器中存储着接下来要执行的指令的地址。程序就是依靠着不断变花的寄存器的值运行起来的。</p><p>cpu信息<br>cpu的种类：不同的CPU对于二进制的理解是不一样的。<br>时钟信号的频率：时钟发生器发送给cpu的电信号的频率。表示时钟信号频率的单位是MHz（兆赫兹=100万回/秒）。时钟信号是在0和1之间反复变换的电信号。通常把发出一次滴答的时间称作一个时钟周期。</p><p>内存信息<br>地址空间<br>每个地址中可以存储多少比特的信息</p><p>I/O信息<br>I/O的种类<br>地址空间<br>连接着何种周边设备</p><p>最低限度所需的流程图符号</p><p>网卡地址前半部分表示生产商，后半部分表示编号。</p><p>子网掩码的作用是标识出在32比特的IP地址中，从哪一位到哪一位是网络地址，从哪一位到哪一位是主机地址。<br>255.255.255.240用二进制表示：<br>11111111.11111111.11111111.11110000<br>值为1的那些位对应着IP地址中的网络地址，后面为0的那些则对应着主机地址。</p><p>DHCP：Dynamic Host Configuration Protocol 动态主机设置协议</p><p>tracert</p><p>ARP：Address Resolution Protocol，地址解析协议，用于实现由IP地址到MAC地址的转换<br>arp -a    查询apr缓存表</p><p>硬件商发送数据的是网卡，网卡之上是设备驱动程序，之上是实现了IP协议的程序，之上是实现了TCP协议的程序，再之上才是应用程序。<br>TCP协议使用“TCP端口号”的数字识别上层的应用程序。TCP端口中有一些是预先定义好的，比如Web使用80端口，电子邮件使用25端口（用于发送）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;计算机三个根本性基础：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;计算机是执行输入、运算、输出的机器；&lt;/li&gt;
-&lt;li&gt;程序是指令和数据的集合；&lt;/li&gt;
-&lt;li&gt;计算机的处理方式有时与人们的思维习惯不同。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;计算机的硬件由大量集成电路组成。每块集成电路上都带有</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>收集的电子书</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-11-22-%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-11-22-%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/</id>
-    <published>2021-05-29T05:43:49.959Z</published>
-    <updated>2021-05-29T05:43:49.959Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>如何阅读一本书</li></ul><p><strong>ActionScript、Flex</strong></p><ul><li>Actionscript 3 image effects</li><li>ActionScript 3</li><li>ActionScript Graphing Cookbook</li><li>ActionScript</li><li>ActionScript大型网页游戏开发</li><li>AdvancED ActionScript Animation动画高级编程</li><li>AdvancED Game Design with Flash</li><li>air_buildingapps</li><li>Flash Cinematic Techniques</li><li>Flash Game Development by Example</li><li>Flex4权威指南</li><li>FLEX企业应用开发实战</li><li>Foundation Game Design with Flash</li><li>FriendsofED</li><li>The Essential Guide to Flash Games(flash游戏编程指南)</li><li>优化Flash性能</li><li>AIR_Android应用开发实战</li><li>Developing Android Applications with Flex 4</li><li>Flash+Flex+Air移动开发入门经典</li><li>mobile-encoding-android-v2_7</li><li>Packt Publishing Flash Development for Android Cookbook (2011)</li><li>使用Flex4</li><li>ABCStructure</li><li>amf0_spec_121207</li><li>amf3_spec_121207</li><li>avm2overview</li><li>swf_file_format_spec_v10</li><li>video_file_format_spec_v10_1</li></ul><br/><p><strong>Android</strong></p><ul><li>Android 4高级编程(第3版)</li><li>Android Developer Tools Essentials</li><li>Android Native Development Kit Cookbook</li><li>Android内核剖析(完整版)</li><li>Android多媒体开发高级编程</li><li>Android应用开发详解</li><li>Android开发精要</li><li>ANDROID框架揭秘</li><li>Android系统源代码情景分析</li><li>Android软件安全与逆向分析</li><li>Dalvik-Bytecode</li><li>embedded_android</li><li>Fragments for All Presentation</li><li>Google Android SDK开发范例大全(第3版)</li><li>Groovy in Action</li><li>Groovy中文教程</li><li>Kotlin in Action</li><li>kotlin-for-android-developers-zh</li><li>Kotlin官方参考文档中文版</li><li>Practical</li><li>practical_android_4_games_development</li><li>Smashing_Android_UI</li><li>The Busy Coder’s Guide to Android Development, Version 4</li><li>[Gradle</li><li>[www</li><li>深入理解Android(卷2)</li><li>深入理解android</li><li>疯狂Android讲义</li><li>精通Android3</li></ul><br/><p><strong>C#</strong></p><ul><li>C#入门经典第5版中文高清版</li><li>C#高级编程(中文第七版)</li></ul><br/><p><strong>C、C++</strong></p><ul><li>Accelerated C++中文版</li><li>Andrew Koenig：C 陷阱与缺陷@2002 (扫描版)</li><li>An_Introduction_to_GCC_中文</li><li>c++  Primer 第5版</li><li>C+++GUI+QT3编程_11774607</li><li>C++STL标准程序库开发指南 PDF电子书下载 带书签目录</li><li>C++标准程序库</li><li>C++模板元编程</li><li>C++沉思录(Ruminations on C++)中文第2版</li><li>C++程序设计原理与实践(中文完整版)</li><li>C++编程规范-101条规则准则与最佳实践</li><li>C++语言的设计和演化</li><li>C专家编程</li><li>C和指针(第二版)高清全版469页</li><li>C程序设计(第四版)谭浩强</li><li>C程序设计语言(第2版_新版)</li><li>C程序设计语言(第2版_新版)习题解答</li><li>C程序设计语言(第2版_新版)非扫描版&amp;详细书签版</li><li>C语言入门经典(第四版)</li><li>C语言范例开发大全</li><li>Effective C   中文版第三版 高清PDF</li><li>Effective STL 中文版</li><li>Essential C++中文版</li><li>Head</li><li>STL源码剖析简体中文完整版(清晰扫描带目录)</li><li>你必须知道的495个C语言问题</li><li>像计算机科学家一样思考C++</li><li>嗨翻C语言_13421426(jb51</li><li>易学C++</li></ul><br/><p><strong>English</strong></p><ul><li>无敌初中必考语法</li><li>新编英语语法教程+学生用书+第5版_PDF</li><li>无敌英语语法：全范围</li></ul><br/><p><strong>History</strong></p><ul><li><p>乔治·奥威尔：一九八四</p></li><li><p>何清涟：现代化的陷阱</p></li><li><p>吴思：潜规则——中国历史中的真实游戏</p></li><li><p>吴思：血酬定律——中国历史中的生存游戏</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (上)</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (下)</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (中)</p></li><li><p>学会提问-批判性思维指南</p></li><li><p>弗洛伊德：梦的解析</p></li><li><p>弗洛伊德：精神分析引论</p></li><li><p>徐中约《中国近代史》（PDF-港版完整无删减）上</p></li><li><p>徐中约《中国近代史》（PDF-港版完整无删减）下</p></li><li><p>斯科特·派克：少有人走的路</p></li><li><p>罗伯特·西奥迪尼：影响力</p></li><li><p>金观涛 &amp; 刘青峰：兴盛与危机——论中国社会超稳定结构</p></li><li><p>阿利安：亚历山大远征记</p></li><li><p>高华：在历史的风陵渡口</p></li><li><p>黄仁宇：中国大历史</p></li><li><p>剑桥中国历史</p><ul><li>中华人民共和国史 (上卷 扫描版)</li><li>明史 (扫描版)</li><li>晚清史 (上卷 扫描版)</li><li>晚清史 (下卷 扫描版)</li><li>民国史 (上卷 扫描版)</li><li>民国史 (下卷 扫描版)</li><li>秦汉史 (扫描版)</li><li>辽西夏金元史 (扫描版)</li><li>隋唐史 (扫描版)</li></ul></li></ul><br/><p><strong>iOS</strong></p><ul><li>AppDistributionGuide</li><li>Effective Objective-C 2</li><li>iOS应用逆向工程 分析与实战</li><li>iOS编程+第4版</li><li>Objective C 编程之道</li><li>Objective C程序设计</li><li>Objective-C编程全解 第3版</li><li>Objective-C高级编程 iOS与OS X多线程和内存管理</li><li>OSX与iOS内核编程</li></ul><br/><p><strong>Java</strong></p><ul><li>advancedservletsjsp</li><li>Effective Enterprise Java(Chinese)</li><li>Head First Servlets and JSP  中文版  第2版</li><li>Head First Servlets and JSP 2nd</li><li>Head First Web设计 (中文版)</li><li>JAVA并发编程实践（中文）</li><li>Java并发编程实践（英文版）</li><li>Java本地接口(JNI)编程指南和规范2</li><li>JAVA案例开发集锦</li><li>Java编程思想_第4版_中文完整版</li><li>Java虚拟机规范中文版</li><li>Java迷题</li><li>JAVA面试题解惑系列</li><li>servlet-2_5-mrel2-spec</li><li>Think In Java 4完美高清中文版</li><li>《Java网络编程(第4版)》</li><li>深入浅出数据分析（美）米尔顿著</li><li>Effective Java（第2版）</li></ul><br/><p><strong>Javascript</strong></p><ul><li>HTML5高级程序设计</li><li>javascript dom 编程艺术</li><li>JavaScript权威指南(第6版)(中文版)</li><li>JavaScript高级程序设计(中文)-第3版</li></ul><br/><p><strong>kinect</strong></p><ul><li>51CTO下载-kinect应用开发实战（全书）</li><li>Kinect人机交互开发实践</li></ul><br/><p><strong>Linux</strong></p><ul><li>bash Cookbook Solutions and Examples for bash Users</li><li>Linux Shell Scripting Cookbook 2nd Edition May 2013</li><li>Linux 与 UNIX Shell 编程指南</li><li>Linux</li><li>linux内核源代码情景分析(上)</li><li>linux内核源代码情景分析(下)</li><li>Linux命令行与Shell脚本编程大全 第2版</li><li>Understanding The Linux Kernel</li><li>UNIX操作系统基础使用手册</li><li>精通UNIXShell脚本编程</li><li>高级Bash脚本编程指南(Advanced Bash-Scripting</li><li>鸟哥的Linux私房菜服务器架设篇(第三版)</li></ul><br/><p><strong>Music</strong></p><ul><li>五线谱入门</li><li>基本乐理</li></ul><br/><p><strong>PHP</strong></p><ul><li>PHP和MySQL</li><li>PHP开发实战1200例</li><li>symfony权威指南</li><li>深入PHP面向对象模式与实践</li><li>白帽子讲 Web 安全</li><li>高性能mysql第三版 </li><li>PHP核心技术与最佳实践</li><li>PHP内核剖析</li><li>深入理解PHP内核</li></ul><br/><p><strong>Python</strong></p><ul><li>Beginning Game Development with Python and Pygame</li><li>Dive into Python</li><li>Effective</li><li>Expert Python Programming(2nd)</li><li>make game with python &amp; pyGame</li><li>Python 3</li><li>Python Cookbook</li><li>Python参考手册(第4版)</li><li>Python基础教程(第2版)</li><li>python标准库中文版PDF(带章节书签)</li><li>Python核心编程第二版-习题答案</li><li>Python源码剖析</li><li>Python灰帽子 黑客与逆向工程师的Python编程之道</li><li>Python灰帽子：黑客与逆向工程师的Python编程之道(英文版)</li><li>The Django Book 2</li><li>The Python Standard Library by Example</li><li>深入学习Python 3</li><li>编写高质量代码 改善Python程序的91个建议</li></ul><br/><p><strong>Qt</strong></p><ul><li>C++  Qt设计模式（第2版）</li><li>QmlBook-In-Chinese</li><li>Qt Creator快速入门</li><li>Qt Quick核心编程 13678855</li><li>Qt5开发及实例</li><li>Qt及Qt Quick开发实战精解</li><li>QT学习之路(全)</li><li>QT高级编程_chs</li><li>the_art_of_building_qt_applications</li><li>《C++设计模式–基于Qt4开源跨平台开发框架》</li></ul><br/><p><strong>PyQt</strong></p><ul><li>pyqt-book</li><li>PyQt5 tutorial</li><li>pyqt5__pythonGui入门教程</li><li>PyQt5入门</li><li>Rapid GUI Programming with Python and Qt</li></ul><p><strong>Temp</strong></p><ul><li>51CTO下载-ffmpeg教程</li><li>CMake Practice</li><li>design-patterns</li><li>FFMPEG教程完美排版</li><li>GarageBand使用指南</li><li>growth全栈增长工程师指南</li><li>InstallationGuide</li><li>kotlin-in-action-in-chinese</li><li>OpenSL_ES_Specification_1</li><li>SDL+GUIDE+中文译本</li><li>SWIGDocumentation</li><li>TCP-IP详解(卷一、二、三)</li><li>Wireshark 数据包分析实战(第2版)最新中文版</li><li>Wireshark 数据包分析实战详解</li><li>《图解TCP IP(第5版)》</li><li>图解设计模式</li><li>程序是怎样跑起来的_PDF电子书下载 带书签目录 高清完整版</li><li>网络是怎样连接的</li><li>计算机是怎样跑起来的</li><li>设计模式</li><li>设计模式之禅(完整高清版)</li><li>Java加密与解密的艺术</li><li>一个证券分析师的醒悟 张化桥的股市真话</li><li>游戏之旅-我的编程感悟</li><li>游戏设计-原理与实践</li><li>荣辱二十年-我的股市人生</li><li>计算机程序的构造和解释</li></ul><br/><p><strong>产品、设计、思想</strong></p><ul><li>A Pattern Language</li><li>Head First 设计模式</li><li>Java与模式</li><li>Java夜未眠</li><li>java设计模式</li><li>人件（原书第3版）</li><li>人月神话</li><li>代码之美</li><li>你的灯亮着吗</li><li>启示录：打造用户喜爱的产品（英文）</li><li>大话设计模式</li><li>学会提问-批判性思维指南</li><li>建筑的永恒之道</li><li>数据结构经典问题和算法分析</li><li>浪潮之巅</li><li>漫谈设计模式</li><li>编码的奥秘</li><li>设计心理学</li><li>设计模式-可复用面向对象软件的基础</li><li>设计模式精解</li><li>设计模式：Java语言中的应用</li><li>高效程序的奥秘</li><li>黑客与画家 硅谷创业之父Paul Graham文集</li></ul><br/><p><strong>产品经理</strong></p><ul><li>互联网产品经理改变世界</li><li>产品经理手册  第3版</li><li>产品经理方法论</li><li>区块链将如何改变世界</li><li>用户体验要素</li><li>用户体验面面观-方法、工具与实践</li></ul><br/><p><strong>德州扑克</strong></p><ul><li>let there be range(中文)</li><li>加注的优势：当今锦标赛激进策略</li><li>哈灵顿在现金上2中文版</li><li>扑克蓝图</li></ul><br/><p><strong>摄影</strong></p><ul><li>数码单反摄影从入门到精通第一卷</li><li>美国纽约摄影学院摄影教材</li></ul><br/><p><strong>服务端</strong></p><ul><li>docker_practice</li><li>Docker从入门到实践</li><li>PHP-Debug-Manual-public</li><li>Redis开发运维实践指南</li><li>Redis源代码分析</li><li>云计算架构技术与实践</li><li>亿级流量网站架构核心技术</li><li>伊甸园之河</li><li>大型网站技术架构核心原理与案例分析</li><li>实用负载均衡技术网站性能优化攻略</li><li>极客与团队</li><li>深入分布式缓存从原理到实践</li><li>精通正则表达式</li><li>软件架构设计</li><li>高扩展性网站的50条原则</li></ul><br/><p><strong>算法、数据结构</strong></p><ul><li>《大话数据结构》 程杰</li><li>程序员实用算法</li><li>算法之道</li><li>算法导论(第二版)习题答案(英文版)</li><li>算法导论</li></ul><br/><p><strong>管理</strong></p><ul><li>MBA教不了的创富课</li></ul><br/><p><strong>股票</strong></p><ul><li>与庄共舞（股票实战操作）</li><li>从零开始学炒股</li><li>价值投资系列之25《上市公司财报解读》</li><li>你不知道的中国股事那些事(高清)</li><li>投资正途</li><li>日本蜡烛图技术</li><li>江恩投资几何学原理</li><li>江恩测市法则（经典之作）</li><li>海龟交易法则</li><li>看盘细节(精选)</li><li>看盘细节</li><li>短线炒股就这几招（操盘必读）</li><li>短线点金：揭开市场的底牌</li><li>短线点金：破解股价的运行轨迹</li><li>短线点金：道破股价涨跌之玄机</li><li>缠中说禅《教你炒股票》1-108课图文全版</li><li>缠论解析  缠中说禅技术理论图解(清晰版)</li><li>聪明的投资者（高质量）</li><li>胡立阳股票投资100招（清晰）</li><li>证券市场基础知识</li><li>【投资艺术】作者：查尔斯 艾里斯</li><li>巴菲特教你读财报</li><li>股票作手回忆录</li><li>超越金融  索罗斯的哲学   (美)乔治·索罗斯   2</li><li>金融炼金术(高质量）</li><li>高胜算操盘</li><li>股市操练大全12345</li></ul><br/><p><strong>计算机基础</strong></p><ul><li>深入理解计算机系统(原书第2版)</li><li>编译、链接、装载</li><li>程序员的自我修养—链接、装载与库</li><li>linker and loader</li><li>现代编译原理：Ｃ语言描述</li><li>编译原理及实践</li><li>编译原理基础</li><li>编译原理（龙书）中文版</li><li>编译原理及实践</li></ul><br/><p><strong>音视频相关</strong></p><ul><li>FFmpeg Tutorial</li><li>FFmpegBasics</li><li>ffmpeg基础库编程开发</li><li>OpenCV 2 计算机视觉编程手册_中文版</li><li>学习OpenCV</li></ul><br/><p><strong>项目管理</strong></p><ul><li>Project 2016项目管理自学经典_王菁_清华大学_2016</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>APK文件的结构</p><ul><li>xxx.apk<ul><li>res：未编译的资源文件<ul><li>anim</li><li>color</li><li>drawable</li><li>layout</li><li>menu</li></ul></li><li>lib</li><li>assets</li><li>META-INF<ul><li>CERT.RSA：保存了签名和公钥证书</li><li>CERT.SF：对每个文件的头3行进行SHA1 hash</li><li>MANIFEST.MF：版本号以及每一个文件的哈希值（Base64），包括资源文件。</li></ul></li><li>com</li><li>classes.dex</li><li>resources.arsc</li><li>AndroidManifest.xml</li></ul></li></ul><h4 id="一、资源打包"><a href="#一、资源打包" class="headerlink" title="一、资源打包"></a>一、资源打包</h4><p>使用aapt来打包res资源文件，生成R.java、resources.arsc和res文件（二进制 &amp; 非二进制如res/raw和pic保持原样）</p><p>res目录有9种目录</p><ul><li><p>animator。这类资源以XML文件保存在res/animator目录下，用来描述属性动画。</p></li><li><p>anim。这类资源以XML文件保存在res/anim目录下，用来描述补间动画。</p></li><li><p>color。这类资源以XML文件保存在res/color目录下，用描述对象颜色状态选择子。</p></li><li><p>drawable。这类资源以XML或者Bitmap文件保存在res/drawable目录下，用来描述可绘制对象。例如，我们可以在里面放置一些图片（.png, .9.png, .jpg, .gif），来作为程序界面视图的背景图。注意，保存在这个目录中的Bitmap文件在打包的过程中，可能会被优化的。例如，一个不需要多于256色的真彩色PNG文件可能会被转换成一个只有8位调色板的PNG面板，这样就可以无损地压缩图片，以减少图片所占用的内存资源。</p></li><li><p>layout。这类资源以XML文件保存在res/layout目录下，用来描述应用程序界面布局。</p></li><li><p>menu。这类资源以XML文件保存在res/menu目录下，用来描述应用程序菜单。</p></li><li><p>raw。这类资源以任意格式的文件保存在res/raw目录下，它们和assets类资源一样，都是原装不动地打包在apk文件中的，不过它们会被赋予资源ID，这样我们就可以在程序中通过ID来访问它们。例如，假设在res/raw目录下有一个名称为filename的文件，并且它在编译的过程，被赋予的资源ID为R.raw.filename，那么就可以使用以下代码来访问它：</p>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Resources res = getResources();  </span><br><span class="line">InputStream is = res.openRawResource(R.raw.filename);  </span><br></pre></td></tr></table></figure></li><li><p>values。这类资源以XML文件保存在res/values目录下，用来描述一些简单值，例如，数组、颜色、尺寸、字符串和样式值等，一般来说，这六种不同的值分别保存在名称为arrays.xml、colors.xml、dimens.xml、strings.xml和styles.xml文件中。</p></li><li><p>xml。这类资源以XML文件保存在res/xml目录下，一般就是用来描述应用程序的配置信息。<br>toc</p><h5 id="R-java"><a href="#R-java" class="headerlink" title="R.java"></a>R.java</h5><p>  public final class R {</p><pre><code>  public static final class layout &#123;      public static int xxx = 0xxxxxx;  &#125;  ...</code></pre><p>  }</p></li></ul><h5 id="resources-arsc"><a href="#resources-arsc" class="headerlink" title="resources.arsc"></a>resources.arsc</h5><p>记录了所有的应用程序资源目录的信息，包括每一个资源名称、类型、值、ID以及所配置的维度信息。</p><p><strong>使用资源</strong></p><ul><li>程序中通过R.resource_type.resource_name来引用相关资源</li><li>xml文件中的使用格式：@[package:]type/name</li></ul><p><strong>aapt命令</strong></p><pre><code>/e/Android/sdk/build-tools/28.0.2/aapt.exe package -f -M src/main/AndroidManifest.xml -I &quot;/e/Android/sdk/platforms/android-28/android.jar&quot; -S src/main/res -J gen -m-f 如果编译出来的文件已经存在，强制覆盖。-m 使生成的包的目录放在-J参数指定的目录。-J 指定生成的R.java的输出目录-S res文件夹路径-A assert文件夹的路径-M AndroidManifest.xml的路径-I 某个版本平台的android.jar的路径-F 具体指定apk文件的输出</code></pre><h4 id="二、aidl阶段"><a href="#二、aidl阶段" class="headerlink" title="二、aidl阶段"></a>二、aidl阶段</h4><p>处理.aidl文件，生成对应的Java接口文件</p><p><strong>aidl命令</strong></p><h4 id="三、Java编译阶段"><a href="#三、Java编译阶段" class="headerlink" title="三、Java编译阶段"></a>三、Java编译阶段</h4><p>编译R.java、Java接口文件、Java源文件，生成.class文件</p><p><strong>javac</strong></p><pre><code>javac -encoding UTF-8 -bootclasspath -d gen/out src/main/java/com/test/MainActivity.java -classpath </code></pre><h4 id="四、dex阶段"><a href="#四、dex阶段" class="headerlink" title="四、dex阶段"></a>四、dex阶段</h4><p>通过dex命令，将.class文件和第三方库中的.class文件处理生成classes.dex</p><p><strong>dx命令</strong></p><pre><code>dx --dex --output=gen/classes.dex gen/out/java/com/test/ </code></pre><h4 id="五、apkbuilder阶段"><a href="#五、apkbuilder阶段" class="headerlink" title="五、apkbuilder阶段"></a>五、apkbuilder阶段</h4><p>将classes.dex、resources.arsc、res文件夹(res/raw资源被原装不动地打包进APK之外，其它的资源都会被编译或者处理)、Other Resources(assets文件夹)、AndroidManifest.xml打包成apk文件。</p><p><strong>注意：</strong></p><p>res/raw和assets的相同点：</p><ol><li>两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制。</li></ol><p>res/raw和assets的不同点：</p><ol><li>res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要AssetManager类。</li><li>res/raw不可以有目录结构，而assets则可以有目录结构，也就是assets目录下可以再建立文件夹</li></ol><p><strong>aapt</strong></p><pre><code>aapt add package/res.apk classes.dex</code></pre><h4 id="六、签名阶段"><a href="#六、签名阶段" class="headerlink" title="六、签名阶段"></a>六、签名阶段</h4><p>对apk进行签名</p><p><strong>apksigner</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">在Android Studio中点击菜单 Build-&gt;Generate signed apk... 打包签名过程中,</span><br><span class="line">可以看到两种签名选项 V1(Jar Signature)  V2(Full APK Signature),</span><br><span class="line">刚开始升级AS看到这个懵了,既然是APK Signature,就放心偷懒选了V2,结果安装失败？？？无奈,只能查资料...</span><br><span class="line"></span><br><span class="line">从Android 7.0开始, 谷歌增加新签名方案 V2 Scheme (APK Signature);</span><br><span class="line">但Android 7.0以下版本, 只能用旧签名方案 V1 scheme (JAR signing)</span><br><span class="line"></span><br><span class="line">V1签名:</span><br><span class="line">    来自JDK(jarsigner), 对zip压缩包的每个文件进行验证, 签名后还能对压缩包修改(移动/重新压缩文件)</span><br><span class="line">    对V1签名的apk/jar解压,在META-INF存放签名文件(MANIFEST.MF, CERT.SF, CERT.RSA), </span><br><span class="line">    其中MANIFEST.MF文件保存所有文件的SHA1指纹(除了META-INF文件), 由此可知: V1签名是对压缩包中单个文件签名验证</span><br><span class="line">    </span><br><span class="line">V2签名:</span><br><span class="line">    来自Google(apksigner), 对zip压缩包的整个文件验证, 签名后不能修改压缩包(包括zipalign),</span><br><span class="line">    对V2签名的apk解压,没有发现签名文件,重新压缩后V2签名就失效, 由此可知: V2签名是对整个APK签名验证</span><br><span class="line">    </span><br><span class="line">    V2签名优点很明显:</span><br><span class="line">        签名更安全(不能修改压缩包)</span><br><span class="line">        签名验证时间更短(不需要解压验证),因而安装速度加快</span><br><span class="line"></span><br><span class="line">注意: apksigner工具默认同时使用V1和V2签名,以兼容Android 7.0以下版本</span><br><span class="line"></span><br></pre></td></tr></table></figure><pre><code>apksigner sign --ks key.jks --out package/app-release.apk package/app-unsigned-aligned.apk//检查签名apksigner verify app.apk</code></pre><h4 id="七、zipalign阶段"><a href="#七、zipalign阶段" class="headerlink" title="七、zipalign阶段"></a>七、zipalign阶段</h4><p>对apk中未压缩的数据进行4字节对齐，对齐后就可以使用mmap函数读取文件，可以像读取内存一样对普通文件进行操作。如果没有4字节对齐，就必须显式的读取，这样比较缓慢并且会耗费额外的内存。</p><p><strong>zipalign</strong></p><pre><code>zipalign 4 package/res.apk package/app-unsigned-aligned.apk</code></pre>]]></content>
     
     
       
       
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;如何阅读一本书&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;ActionScript、Flex&lt;/strong&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;APK文件的结构&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Actionscript 3 image effects&lt;/li&gt;
-&lt;li&gt;ActionScript 3&lt;/li&gt;
-&lt;li</summary>
+&lt;li&gt;xxx.apk&lt;ul&gt;
+&lt;li&gt;res：未编译的资源文件&lt;ul&gt;
+&lt;li&gt;anim&lt;/li&gt;
+&lt;li&gt;color&lt;/li&gt;
+&lt;li&gt;drawable&lt;/li&gt;
+&lt;li&gt;layout&lt;/li&gt;
+&lt;li&gt;menu&lt;/li&gt;
+&lt;/ul&gt;</summary>
       
     
     
     
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Kotlin实战》读书笔记</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2019-03-22-%E3%80%8AKotlin%E5%AE%9E%E6%88%98%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2019-03-22-%E3%80%8AKotlin%E5%AE%9E%E6%88%98%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-05-29T05:43:49.959Z</published>
-    <updated>2021-05-29T05:43:49.960Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h5><ul><li>不需要分号</li></ul><h5 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h5><ul><li>fun声明函数</li><li>函数可以定义在文件的最外层</li></ul><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">max</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">if</span>(a&gt;b) a <span class="keyword">else</span> b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>表达式函数体</strong></p><pre><code>fun max(a: Int, b: Int): Int = if(a&gt;b) a else b</code></pre><p>表达式函数体可以省略返回类型，Kotlin会进行类型推导</p><pre><code>fun max(a: Int, b: Int)= if(a&gt;b) a else b</code></pre><p>数组就是类</p><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><ul><li>var表示可写属性</li><li>val表示只读属性</li></ul><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> answer = <span class="number">42</span> <span class="comment">//这个变量永不为null</span></span><br><span class="line"><span class="keyword">var</span> answer1:<span class="built_in">Int</span>? = <span class="number">40</span> <span class="comment">// 这个变量可以为null</span></span><br><span class="line"><span class="keyword">val</span> answer:<span class="built_in">Int</span> = <span class="number">42</span></span><br><span class="line"><span class="keyword">val</span>表示不可变引用，使用<span class="keyword">val</span>声明的变量不能在初始化之后再次赋值。</span><br><span class="line"><span class="keyword">var</span>可变引用，可以改变值，但不能改变类型。</span><br><span class="line"><span class="keyword">var</span> answer = <span class="number">13</span></span><br><span class="line">answer = <span class="string">&quot;no &quot;</span> 这样是错误的</span><br></pre></td></tr></table></figure><p><strong>字符串模板</strong></p><pre><code>$name$&#123;name&#125;</code></pre><p><strong>类</strong></p><pre><code>class Person(val name:String)class Person(val name:String, var isMarried:Boolean)</code></pre><p><strong>自定义访问器</strong></p><pre><code>class Rectangle(val height:Int, val width:Int) &#123;    val isSquare:Boolean        get() &#123;            return height == width        &#125;    //或者    get() = height == width&#125;</code></pre><p>包层级结构不需要遵守目录层级结构</p><p><strong>枚举</strong></p><pre><code>enum class Color(val r:Int, val g:Int, val b:Int) &#123;RED(255,0,0),GREEN(0,255,0);fun rgb() = (r*256 + g)*256 + b&#125;println(Color.GREEN.rgb())fun getMnumonic(color: Color) =     when(color) &#123;        Color.RED -&gt; &quot;Richard&quot;        Color.GREEN -&gt; &quot;Gave&quot;    &#125;</code></pre><p>@JvmOverloads， 会生成Java重载函数</p><p>顶层属性和函数</p><p>扩展函数不能被重写</p><h4 id="扩展属性"><a href="#扩展属性" class="headerlink" title="扩展属性"></a>扩展属性</h4><p>vararg 修饰符  可变参数</p><h4 id="中缀调用"><a href="#中缀调用" class="headerlink" title="中缀调用"></a>中缀调用</h4><p>局部函数</p><p>kotlin类声明默认是final和public，要想声明不是final的，将其标记为open</p><p>open、final、abstract</p><p>lateinit</p><p><strong>object</strong></p><p>定义一个类并同事创建一个实例，使用场景：</p><ul><li>对象声明是定义单例的一种方式</li><li>伴生对象可以持有工厂方法和其他与整个类相关，但在调用时并不依赖类实例的方法。</li><li>对象表达式用来替代Java的匿名内部类</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">object DataProviderManager &#123;</span><br><span class="line">    <span class="function">fun <span class="title">registarDataProvider</span><span class="params">(provider: DataProvider)</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">DataProviderManager.registarDataProvider(...)</span><br></pre></td></tr></table></figure><p><strong>伴生对象companion</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClaa</span> </span>&#123;</span><br><span class="line">    companion object Factory&#123;</span><br><span class="line">        <span class="function">fun <span class="title">create</span><span class="params">()</span>:MyClass </span>= MyClass()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//该伴生对象的成员可通过只使用类名作为限定符来调用</span></span><br><span class="line">val instance = MyClass.create()</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以省略伴生对象的名称，在这种情况下将使用名称 Companion</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    companion object &#123; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">val x = MyClass.Companion</span><br></pre></td></tr></table></figure><p>在 JVM 平台，如果使用 @JvmStatic 注解，你可以将伴生对象的成员生成为真正的静态方法和字段</p><p>直接通过容器类名来访问整个对象的方法和属性的能力</p><p>匿名对象可以实现多个接口或者不实现接口</p><p>lamdba表达式始终用花括号包围</p><pre><code>val sum = &#123;x: Int, y: Int -&gt; x+y&#125;println(sum(1,2))</code></pre><p>允许lamdba内部访问非final变量甚至修改它们</p><p>成员引用</p><pre><code>val getAge = Person::age</code></pre><p>all any  count  find  对集合应用判断式</p><p>with函数<br>apply</p><p>类型系统</p><p>可空性</p><pre><code>fun strLen(s:String) = s.lengthfun strLen(s:String?) = s.length</code></pre><p>安全调用运算符 ?.，只要链式中一个值为null，则整个表达式都返回null</p><pre><code>s?.toUpperCase()val testStr : String? = nullval result = testStr?.length?.plus(5)?.minus(10)println(result)</code></pre><p>?:</p><p>当一个函数有返回值时，如果方法中的代码使用?.去返回一个值，那么方法的返回值的类型后面也要加上?符号</p><pre><code>fun funNullMethod() : Int? &#123;    val str : String? = &quot;123456&quot;    return str?.length&#125;</code></pre><p>as?</p><p>非空断言  “!!”    显示地抛出异常</p><h5 id="let函数"><a href="#let函数" class="headerlink" title="let函数"></a>let函数</h5><p>作用：使用符号?.验证的时候忽略掉null</p><p>用法：变量?.let{…}</p><pre><code>val arrTest : Array&lt;Int?&gt; = arrayOf(1,2,null,3,null,5,6,null)// 传统写法for (index in arrTest) &#123;    if (index == null)&#123;        continue    &#125;    println(&quot;index =&gt; $index&quot;)&#125;// let写法for (index in arrTest) &#123;    index?.let &#123; println(&quot;index =&gt; $it&quot;) &#125;&#125;</code></pre><h5 id="Evils操作符"><a href="#Evils操作符" class="headerlink" title="Evils操作符"></a>Evils操作符</h5><p><strong>?:</strong></p><p>判断一个可空类型时，会返回一个我们自己设定好的默认值</p><pre><code>val testStr : String? = nullvar length = 0// ?: 写法length = testStr?.length ?: -1println(length)</code></pre><p><strong>!!</strong></p><p>判断一个可空类型时，会显示的抛出空引用异常</p><pre><code>val testStr : String? = nullprintln(testStr!!.length)</code></pre><p><strong>as?</strong></p><p>安全的类型转换</p><pre><code>val num2 : Int? = &quot;Koltin&quot; as? Intprintln(&quot;nun2 = $num2)</code></pre><p>基本类型、包装类型的转换需要通过API</p><p>Any  kotlin基类<br>Unit  kotlin中的void<br>Nothing    这个函数永不返回</p><p>List    listOf    mutableListOf、arrayListOf<br>Set    setOf    mutableSetOf、hashSetOf、linkedSetOf、sortedSetOf<br>Map    mapOf    mutableMapOf、hashMapOf、linkedMapOf、sortedMapOf</p><p>重载二元算术运算<br>operator</p><p>委托属性  by lazy()</p><p>kotlin允许使用对应名称的函数来重载一些标准的数学运算，但不能定义自己的运算符。</p><p>函数类型</p><p>内联函数</p><p>注解<br>@JvmName<br>@JvmStatic<br>@JvmOverloads<br>@JvmField</p><p>注解类：用来定义关联到声明和表达式的元数据的结构，它们不能包含任何代码</p><p>元注解<br>@Retention    说明你声明的注解是否会存储到.class文件，以及在运行时是否可以通过反射来访问它。</p><p>kotlin反射API</p><p>invoke</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h5 id=&quot;基本规则&quot;&gt;&lt;a href=&quot;#基本规则&quot; class=&quot;headerlink&quot; title=&quot;基本规则&quot;&gt;&lt;/a&gt;基本规则&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;不需要分号&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;header</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Java编程思想》读书笔记</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2016-01-17-%E3%80%8AJava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2016-01-17-%E3%80%8AJava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-05-29T05:43:49.958Z</published>
-    <updated>2021-05-29T05:43:49.958Z</updated>
-    
-    <content type="html"><![CDATA[<p>final</p><p>finally</p><p>finalize</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;final&lt;/p&gt;
-&lt;p&gt;finally&lt;/p&gt;
-&lt;p&gt;finalize&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《网络是如何连接的》读书笔记</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-06-12-%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2018-06-12-%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-05-29T05:43:49.958Z</published>
-    <updated>2021-05-29T05:43:49.958Z</updated>
-    
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>火车票黄牛</title>
-    <link href="http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/2019-10--07-%E7%81%AB%E8%BD%A6%E7%A5%A8%E9%BB%84%E7%89%9B/"/>
-    <id>http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/2019-10--07-%E7%81%AB%E8%BD%A6%E7%A5%A8%E9%BB%84%E7%89%9B/</id>
-    <published>2021-05-29T05:42:40.154Z</published>
-    <updated>2021-05-29T05:53:56.982Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天“长见识”了。</p><p>开始以为回广州的高铁票应该很容易买到，所以，并没有提前买票。然而，在家用某行火车票刷票到7点也没买到票。明天可还要上班呢。想着要不去人工售票处碰碰运气。然后来到了高铁站。先去了人工售票窗口，售票的这个小姐姐用非常冷淡的表情回答说没有，然后我就再次问了一次，请问今晚往广州方向的车的票有没有，只要能上车的都行？结果是她再次肯定的说了一句没有！哎，既然这样说了…</p><p>然后，我想去售票机上碰碰运气。当我到了一台售票机前，打算查询的时候，旁边来了一位小哥，跟我说：兄Dai，需要票吗？一个小时以内的都可以搞定。我当时就有点懵逼了，黄牛难道可以变出票来？想着还是要回去的，于是说：我需要的。他说：你跟我来这边吧，这边的机器快一些。然后我们来到了旁边的一台机器旁，只见他迅速的在售票机前点击。操作也就是查询是否有余票，然后一下子就出现了，请刷身份证的提示。然后跟我说：快把身份证放上来。我一下子看傻了，然后迅速冷静下来，问他需要给他多少钱。结果，等了十几秒吧，票就没了。他表现的有点懊恼。想想还是要回去的，于是跟他谈价钱，然后又看他操作了一遍，太神奇了。不到一分钟，他又刷出来一张，然后我拿出身份证支付了。</p><p>事后想想，难道这是售票机的漏洞吗？难道售票机上的查询接口跟人工售票厅里的不一样？黄牛的这个钱也太好赚了吧。</p><p>再想想，可能是后台针对售票机在开车前一段时间特意留了一些票吧！这样能让真正赶火车的人能买到票。真是一片良苦用心啊！可惜哪里有利益哪里就有黄牛啊！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今天“长见识”了。&lt;/p&gt;
-&lt;p&gt;开始以为回广州的高铁票应该很容易买到，所以，并没有提前买票。然而，在家用某行火车票刷票到7点也没买到票。明天可还要上班呢。想着要不去人工售票处碰碰运气。然后来到了高铁站。先去了人工售票窗口，售票的这个小姐姐用非常冷淡的表情回答说没有，然后我</summary>
-      
-    
-    
-    
-    <category term="随笔" scheme="http://shjlone.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="Android" scheme="http://shjlone.github.io/categories/Android/"/>
     
     
   </entry>
   
   <entry>
-    <title>《大明王朝1566》经典语录</title>
-    <link href="http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/2020-04-10-%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E3%80%8B%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95/"/>
-    <id>http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/2020-04-10-%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E3%80%8B%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95/</id>
-    <published>2021-05-29T05:42:40.154Z</published>
-    <updated>2021-05-29T05:53:56.955Z</updated>
+    <title>多线程</title>
+    <link href="http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>http://shjlone.github.io/wiki/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/%E6%9D%82%E9%A1%B9/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
+    <published>2021-05-29T06:56:54.532Z</published>
+    <updated>2021-05-29T09:12:04.154Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>朝野都知道，我是严阁老提携的人。千秋万代以后，史书上我胡宗宪还会是严阁老的人。可你谭纶，还有朝里那些清流为什么还会看重我？就是我胡某在大事上从来上不误国，下不误民。</li><li>孔子说的“知不可为而为之”是什么本意！孔子是告诉世人，做事时不问可不可能，但问应不应该！</li><li>你中有我，我中有你，天下事坏就坏在这里。</li><li>事未经历不知难。</li><li>官场之中无朋友。</li><li>凡事都当作两面想。</li><li>你是个刚正的人，敢说话，敢抗上。可真要抗上，你这个七品能抗得过谁？在浙江你能做些事情撼动朝廷，那是因为你背后有人要撼动朝廷。到了江西分宜，凭你一个人又能震动谁？皇上要用的人谁也推不倒，皇上不用的人谁也保不了。</li><li>两句话你要记住，一句是文官们说的‘做官要三思’，什么叫三思，三思就是思危、思退、思变。知道了危险就能躲开危险，这就叫思危；躲到人家都不注意到你的地方，这就叫思退；退了下来就有了机会，再慢慢看、慢慢想，自己以前哪儿错了，往后该怎么做，这就叫思变。我再教你武官们说的那一句‘置之死地而后生’，看我大明朝的气数，这皇位迟早有一天是裕王的，到了那一天你才真是个死呢。 </li><li>文官的衣服上绣的是禽，武官的衣服上绣的是兽。披上了这身皮，我们哪一个不是衣冠禽兽。 </li><li>任何人答应你的事都不算数，只有自己能做主的才算数。 </li><li>这个世上，真靠得住的就两种人，一种是笨人，一种是直人。笨人没有心眼，直人不使心眼。 </li><li>世间万事万物都只有一个理，各人站的位置不同，看法不同而已。</li><li>历来造反的都是种田的人，没听说商人能闹翻了天。</li><li>裕王: 大明朝谁是贤臣? 嘉靖: 没有谁是真正的贤臣,贤时用之,不贤黜之。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="线程的来源"><a href="#线程的来源" class="headerlink" title="线程的来源"></a>线程的来源</h2><h2 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h2><p><img src="./thread_1.png"></p><ul><li>新建状态:</li></ul><p>线程对象已经创建，还没有在其上调用start()方法。</p><ul><li>可运行状态:</li></ul><p>当线程有资格运行，但调度程序还没有把它选定为运行线程时线程所处的状态。当start()方法调用时，线程首先进入可运行状态。在线程运行之后或者从阻塞、等待或睡眠状态回来后，也返回到可运行状态。</p><ul><li>运行状态:</li></ul><p>就绪状态的线程获取了CPU，执行程序代码。</p><ul><li>阻塞状态:</li></ul><p>阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入可运行状态，才有机会转到运行状态。</p><p>阻塞的情况分三种：</p><pre><code>等待阻塞:运行的线程执行wait()方法，该线程会释放占用的所有资源，JVM会把该线程放入“等待池”中。进入这个状态后，是不能自动唤醒的，必须依靠其他线程调用notify()或notifyAll()方法才能被唤醒. (注意:当调用wait()后，线程会释放掉它所占有的&#39;锁&#39;，所以线程只有在持有&#39;锁&#39;才能进入可运行状态.)同步阻塞:运行的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入“锁池”中。其他阻塞:运行的线程执行sleep()或join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。</code></pre><ul><li>死亡状态:</li></ul><p>线程执行完了或者因异常退出了run()时就认为它死去。这个线程对象也许是活的，但是，它已经不是一个单独执行的线程。线程一旦死亡，就不能复生。如果在一个死去的线程上调用start()方法，会抛出java.lang.IllegalThreadStateException异常。</p><h2 id="线程间通讯"><a href="#线程间通讯" class="headerlink" title="线程间通讯"></a>线程间通讯</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>]]></content>
     
     
       
       
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;朝野都知道，我是严阁老提携的人。千秋万代以后，史书上我胡宗宪还会是严阁老的人。可你谭纶，还有朝里那些清流为什么还会看重我？就是我胡某在大事上从来上不误国，下不误民。&lt;/li&gt;
-&lt;li&gt;孔子说的“知不可为而为之”是什么本意！孔子是告诉世人，做事时不问可不可能，但问</summary>
+    <summary type="html">&lt;h2 id=&quot;线程的来源&quot;&gt;&lt;a href=&quot;#线程的来源&quot; class=&quot;headerlink&quot; title=&quot;线程的来源&quot;&gt;&lt;/a&gt;线程的来源&lt;/h2&gt;&lt;h2 id=&quot;线程的状态&quot;&gt;&lt;a href=&quot;#线程的状态&quot; class=&quot;headerlink&quot; title=&quot;线程的</summary>
       
     
     
     
-    <category term="随笔" scheme="http://shjlone.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="技术" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://shjlone.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高效的使用Mac</title>
+    <link href="http://shjlone.github.io/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/%E9%AB%98%E6%95%88%E7%9A%84%E4%BD%BF%E7%94%A8Mac/"/>
+    <id>http://shjlone.github.io/wiki/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/%E9%AB%98%E6%95%88%E7%9A%84%E4%BD%BF%E7%94%A8Mac/</id>
+    <published>2021-05-29T06:56:54.529Z</published>
+    <updated>2021-05-29T06:56:54.529Z</updated>
+    
+    <content type="html"><![CDATA[<p>Effective use of XXX系列</p><ul><li><a href="">Effective use of Mac</a></li><li><a href="">Effective use of iPhone</a></li><li><a href="">Effective use of Windows</a></li><li><a href="">Effective use of Firefox</a></li><li><a href="">Effective use of Alfred</a></li></ul><p><strong>对于高效使用的理解</strong></p><p>所谓的高效，在笔者看来就是可以一步完成的事情，一定不要花两步。虽然Mac本身的操作已经比较人性化了，但还是有很多地方可以值得我们优化的。下面列一些场景分析一下。</p><p>场景一：想在不同软件之间快速切换。一般的做法是使用Command+Tab进行已经打开的软件间切换，使用聚焦搜索软件名进行打开。其实可以使用快捷键进行切换，参考Alfred的用法。</p><p>场景二：比如当前在文本编辑器页面写文章，突然想到某个东西需要去百度搜索一下。一般的做法是，使用Command+Tab切换到浏览器，在浏览器中新建tab页，输入baidu.com，输入关键字，进行搜索。而使用Alfred，则可以优化为：Alt+space打开Alfred搜索框，输入bd+空格，输入关键字，回车，即可自动打开浏览器搜索页。</p><p>场景三：在做复制粘贴的时候，有时候想对以前复制过的内容进行粘贴。</p><p>场景四：有一些使用率非常高的词，比如QQ号、邮箱、手机号、身份证号等信息，需要不停的输入，如果可以做到输入几个关键字就能全部输出岂不是提升了很多时间？</p><p>好了，下面正式开始动手吧！</p><p>此文致力于提高使用效率，基本的操作请读者自行阅读<a href="https://support.apple.com/zh-cn/guide/mac-help">官方文档</a>或其他文档。</p><h2 id="1-Mac的基本优化"><a href="#1-Mac的基本优化" class="headerlink" title="1 Mac的基本优化"></a>1 Mac的基本优化</h2><h3 id="1-1-访达的优化"><a href="#1-1-访达的优化" class="headerlink" title="1.1 访达的优化"></a>1.1 访达的优化</h3><h4 id="1-1-1I显示隐藏文件"><a href="#1-1-1I显示隐藏文件" class="headerlink" title="1.1.1Ï显示隐藏文件"></a>1.1.1Ï显示隐藏文件</h4><p><strong>方法一：</strong></p><p>使用快捷键<code>Command+Shift+.</code></p><p><strong>方法二：</strong></p><p>终端中输入下面的命令，这种方式会长久生效。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">隐藏</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true;killall Finder</span><br><span class="line">显示</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false;killall Finder</span><br></pre></td></tr></table></figure><h4 id="1-2-顶部栏显示完整路径"><a href="#1-2-顶部栏显示完整路径" class="headerlink" title="1.2 顶部栏显示完整路径"></a>1.2 顶部栏显示完整路径</h4><p>可以通过在访达中设置显示路径栏的方式显示，不过这种方式会在访达底部多一栏。可以通过终端输入以下命令。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">显示完整路径</span><br><span class="line">defaults write com.apple.finder _FXShowPosixPathInTitle -bool TRUE;killall Finder</span><br><span class="line"></span><br><span class="line">隐藏完整路径</span><br><span class="line">defaults delete com.apple.finder _FXShowPosixPathInTitle;killall Finder</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="/public/mac/finder_1.png"></p><h4 id="1-3-标签的使用"><a href="#1-3-标签的使用" class="headerlink" title="1.3 标签的使用"></a>1.3 标签的使用</h4><p>这是一个非常实用的功能，将文件/文件夹标记成不同的标签，然后通过点击标签来快速定位。对于目录层次很深的文件非常有用。</p><p>使用也很简单，右键某个文件或文件夹，点击某个标签即可。标签也可以进行管理，标签的图标也可以自定义，选中标签栏中某个标签，使用command+control+空格。</p><p><img src="/public/mac/finder_2.png"></p><p>对于使用频率非常高的文件夹，可以直接拖拽到<code>个人收藏</code>栏，也可以拖拽到工具栏</p><p><img src="/public/mac/finder_3.png"></p><h3 id="2-1-开机启动脚本设置"><a href="#2-1-开机启动脚本设置" class="headerlink" title="2.1 开机启动脚本设置"></a>2.1 开机启动脚本设置</h3><p>首先创建一个shell文件，根据自己的需求实现一些逻辑，比如：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#开机启动脚本</span><br><span class="line"></span><br><span class="line"># 开机需要启动的程序</span><br><span class="line">open /Applications/DingTalk.app</span><br><span class="line">open /Applications/QQ.app</span><br><span class="line"></span><br><span class="line"># 其他操作</span><br><span class="line"></span><br><span class="line">#exit</span><br></pre></td></tr></table></figure><p>然后给这个文件添加执行权限，chmod +x 文件名。然后设置打开方式为终端。</p><p>然后打开<code>系统偏好设置</code>–&gt;<code>用户与群组</code>–&gt;<code>登录项</code>，添加新建的shell文件。</p><h2 id="2-Mac上的提高效率的软件"><a href="#2-Mac上的提高效率的软件" class="headerlink" title="2.Mac上的提高效率的软件"></a>2.Mac上的提高效率的软件</h2><h3 id="2-1-Alfred（神器）"><a href="#2-1-Alfred（神器）" class="headerlink" title="2.1 Alfred（神器）"></a>2.1 Alfred（神器）</h3><p>由于此软件非常强大，因此单独写一篇来介绍它，<code>[点击查看]()</code></p><h3 id="2-2-switchhost（hosts切换）"><a href="#2-2-switchhost（hosts切换）" class="headerlink" title="2.2 switchhost（hosts切换）"></a>2.2 switchhost（hosts切换）</h3><p>该软件是用来做hosts管理的，对于程序员来说非常友好，用法也很简单。可以建立一个个tab来分组管理，每个tab可以的显示隐藏互不影响。点击行号可以对该行进行快速注释或者取消注释。</p><p>[img]</p><h3 id="2-3-iTerm（终端的替代品）"><a href="#2-3-iTerm（终端的替代品）" class="headerlink" title="2.3 iTerm（终端的替代品）"></a>2.3 iTerm（终端的替代品）</h3><p>配置</p><h3 id="2-4-资源管理器工具Commander-One"><a href="#2-4-资源管理器工具Commander-One" class="headerlink" title="2.4 资源管理器工具Commander One"></a>2.4 资源管理器工具Commander One</h3><p>不完善的地方：</p><ul><li>路径栏无法直接编辑，不方便直接跳转到某个路径。Total Commander的路径是可编辑的。</li><li>无法直接使用快捷键将当前页面显示到另外一测。Total Commander可以直接使用Ctrl+←→来操作。</li><li>不可配置编辑所使用的软件，只能用默认的。</li></ul><h3 id="2-5-BatterZip（文件解压压缩）"><a href="#2-5-BatterZip（文件解压压缩）" class="headerlink" title="2.5 BatterZip（文件解压压缩）"></a>2.5 BatterZip（文件解压压缩）</h3><h3 id="2-6-Sublime-Text（文件编辑器）"><a href="#2-6-Sublime-Text（文件编辑器）" class="headerlink" title="2.6 Sublime Text（文件编辑器）"></a>2.6 Sublime Text（文件编辑器）</h3><p>轻量级文本编辑器，可配置性很强。</p><h3 id="2-7-CleanMyMac（优化工具）"><a href="#2-7-CleanMyMac（优化工具）" class="headerlink" title="2.7 CleanMyMac（优化工具）"></a>2.7 CleanMyMac（优化工具）</h3><h3 id="2-8-Dash（程序员API查询工具）"><a href="#2-8-Dash（程序员API查询工具）" class="headerlink" title="2.8 Dash（程序员API查询工具）"></a>2.8 Dash（程序员API查询工具）</h3><h2 id="3-Mac常用命令"><a href="#3-Mac常用命令" class="headerlink" title="3 Mac常用命令"></a>3 Mac常用命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:port  查询端口对应的进程id</span><br><span class="line">kill pid  杀死进程</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Effective use of XXX系列&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Effective use of Mac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Effective use of iPhone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://shjlone.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>对于服务端开发的理解</title>
-    <link href="http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/2021-02-01-%E5%AF%B9%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/2021-02-01-%E5%AF%B9%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E7%90%86%E8%A7%A3/</id>
-    <published>2021-05-29T05:42:40.154Z</published>
-    <updated>2021-05-29T05:53:57.002Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/%E5%AF%B9%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/%E5%AF%B9%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E7%90%86%E8%A7%A3/</id>
+    <published>2021-05-29T06:50:55.134Z</published>
+    <updated>2021-05-29T06:50:55.134Z</updated>
     
     <content type="html"><![CDATA[<p>最近一段时间，开始了解并完成了一些后端需求。大致的过程如下：</p><ul><li>熟悉PHP，看了《PHP核心技术与最佳实践》、《PHP内核剖析》、《深入理解PHP内核》；</li><li>熟悉MySQL，看了《MySQL必知必会》，接下来会看《高性能MySQL》；</li><li>熟悉Redis，看了《Redis实战》；</li><li>阅读Symfony官网文档，了解其基本原理；</li><li>由于本地使用docker开发环境，所以对docker相关知识点也进行了一轮复习；</li></ul><p>整体来看，想使用PHP相关技术栈进行后端开发，经过上面的学习后，写写业务代码，一点问题都没有。公司使用PHP这一套技术栈，也是基于人力成本、开发效率各方面<br>因素综合考虑而定的。在现有体量下也确实是比较好的选择。因为自己本身有其他语言的底子在，学习的过程中还是蛮顺利的。现在回过头看看，后端的整体架构设计也是<br>根据体量的大小一步步进化来的。</p><p>当一个（小）项目刚开始时，使用Nginx+Symfony+MySQL，当业务量有所增长，这个时候需要加上缓存Redis；当业务继续增长，这个时候需要多台机器部署了，需要<br>使用负载均衡，Nginx进行反向代理，将流量分发到不同的机器；当业务继续增长，这个时候需要考虑部署多个数据库，进行主从同步；当业务继续增长，这个时候Redis也要<br>考虑使用集群。随着业务继续增长，数据库表的设计，如何分表。如何分库，业务代码如何写效率高，等等问题都要进行考虑了。当业务还在继续增长，可能有些事情用PHP来干<br>已经不是最优解了！</p><p>除了上面所说的一些技术选择外，为了保证服务器的稳定，还有很多事情要做的，比如要对服务器相关数据进行监控，比如请求数、慢请求数、服务器流量消耗情况等；要有<br>一套完善的日志系统；对数据库的监控；容灾机制等等。</p><p>这些知识的获取途径无外乎两种，一是业务增长喜人，给了你机会把这些坑都踩一遍；二是在大公司，现成的解决方案供你学习。所以，刚毕业的小菜鸟们，还是建议能去<br>大公司就尽量去大公司，做大做强的小公司太少了，不一定能被你撞上。</p><p><strong>服务端需要用到的技术或软件：</strong></p><ul><li>开发框架：Symfony、ThinkPHP等</li><li>消息队列：RabbitMQ等  </li><li>服务器：Nginx、Apache等</li><li>缓存：Redis、MemCached等</li><li>数据存储：MySQL、PostgreSQL等</li><li>代码部署：Walle等</li><li>数据监控：Zabbix等</li><li>日志分析系统：elk等</li></ul>]]></content>
     
@@ -221,11 +123,112 @@
   </entry>
   
   <entry>
+    <title>《大明王朝1566》经典语录</title>
+    <link href="http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E3%80%8B%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95/"/>
+    <id>http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E3%80%8B%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95/</id>
+    <published>2021-05-29T06:50:55.133Z</published>
+    <updated>2021-05-29T06:50:55.134Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>朝野都知道，我是严阁老提携的人。千秋万代以后，史书上我胡宗宪还会是严阁老的人。可你谭纶，还有朝里那些清流为什么还会看重我？就是我胡某在大事上从来上不误国，下不误民。</li><li>孔子说的“知不可为而为之”是什么本意！孔子是告诉世人，做事时不问可不可能，但问应不应该！</li><li>你中有我，我中有你，天下事坏就坏在这里。</li><li>事未经历不知难。</li><li>官场之中无朋友。</li><li>凡事都当作两面想。</li><li>你是个刚正的人，敢说话，敢抗上。可真要抗上，你这个七品能抗得过谁？在浙江你能做些事情撼动朝廷，那是因为你背后有人要撼动朝廷。到了江西分宜，凭你一个人又能震动谁？皇上要用的人谁也推不倒，皇上不用的人谁也保不了。</li><li>两句话你要记住，一句是文官们说的‘做官要三思’，什么叫三思，三思就是思危、思退、思变。知道了危险就能躲开危险，这就叫思危；躲到人家都不注意到你的地方，这就叫思退；退了下来就有了机会，再慢慢看、慢慢想，自己以前哪儿错了，往后该怎么做，这就叫思变。我再教你武官们说的那一句‘置之死地而后生’，看我大明朝的气数，这皇位迟早有一天是裕王的，到了那一天你才真是个死呢。 </li><li>文官的衣服上绣的是禽，武官的衣服上绣的是兽。披上了这身皮，我们哪一个不是衣冠禽兽。 </li><li>任何人答应你的事都不算数，只有自己能做主的才算数。 </li><li>这个世上，真靠得住的就两种人，一种是笨人，一种是直人。笨人没有心眼，直人不使心眼。 </li><li>世间万事万物都只有一个理，各人站的位置不同，看法不同而已。</li><li>历来造反的都是种田的人，没听说商人能闹翻了天。</li><li>裕王: 大明朝谁是贤臣? 嘉靖: 没有谁是真正的贤臣,贤时用之,不贤黜之。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;朝野都知道，我是严阁老提携的人。千秋万代以后，史书上我胡宗宪还会是严阁老的人。可你谭纶，还有朝里那些清流为什么还会看重我？就是我胡某在大事上从来上不误国，下不误民。&lt;/li&gt;
+&lt;li&gt;孔子说的“知不可为而为之”是什么本意！孔子是告诉世人，做事时不问可不可能，但问</summary>
+      
+    
+    
+    
+    <category term="随笔" scheme="http://shjlone.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>火车票黄牛</title>
+    <link href="http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/%E7%81%AB%E8%BD%A6%E7%A5%A8%E9%BB%84%E7%89%9B/"/>
+    <id>http://shjlone.github.io/wiki/%E9%9A%8F%E7%AC%94/%E7%81%AB%E8%BD%A6%E7%A5%A8%E9%BB%84%E7%89%9B/</id>
+    <published>2021-05-29T06:50:55.133Z</published>
+    <updated>2021-05-29T06:50:55.133Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天“长见识”了。</p><p>开始以为回广州的高铁票应该很容易买到，所以，并没有提前买票。然而，在家用某行火车票刷票到7点也没买到票。明天可还要上班呢。想着要不去人工售票处碰碰运气。然后来到了高铁站。先去了人工售票窗口，售票的这个小姐姐用非常冷淡的表情回答说没有，然后我就再次问了一次，请问今晚往广州方向的车的票有没有，只要能上车的都行？结果是她再次肯定的说了一句没有！哎，既然这样说了…</p><p>然后，我想去售票机上碰碰运气。当我到了一台售票机前，打算查询的时候，旁边来了一位小哥，跟我说：兄Dai，需要票吗？一个小时以内的都可以搞定。我当时就有点懵逼了，黄牛难道可以变出票来？想着还是要回去的，于是说：我需要的。他说：你跟我来这边吧，这边的机器快一些。然后我们来到了旁边的一台机器旁，只见他迅速的在售票机前点击。操作也就是查询是否有余票，然后一下子就出现了，请刷身份证的提示。然后跟我说：快把身份证放上来。我一下子看傻了，然后迅速冷静下来，问他需要给他多少钱。结果，等了十几秒吧，票就没了。他表现的有点懊恼。想想还是要回去的，于是跟他谈价钱，然后又看他操作了一遍，太神奇了。不到一分钟，他又刷出来一张，然后我拿出身份证支付了。</p><p>事后想想，难道这是售票机的漏洞吗？难道售票机上的查询接口跟人工售票厅里的不一样？黄牛的这个钱也太好赚了吧。</p><p>再想想，可能是后台针对售票机在开车前一段时间特意留了一些票吧！这样能让真正赶火车的人能买到票。真是一片良苦用心啊！可惜哪里有利益哪里就有黄牛啊！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天“长见识”了。&lt;/p&gt;
+&lt;p&gt;开始以为回广州的高铁票应该很容易买到，所以，并没有提前买票。然而，在家用某行火车票刷票到7点也没买到票。明天可还要上班呢。想着要不去人工售票处碰碰运气。然后来到了高铁站。先去了人工售票窗口，售票的这个小姐姐用非常冷淡的表情回答说没有，然后我</summary>
+      
+    
+    
+    
+    <category term="随笔" scheme="http://shjlone.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《深入理解计算机》读书笔记8：异常流控制</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B08-%E5%BC%82%E5%B8%B8%E6%B5%81%E6%8E%A7%E5%88%B6/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B08-%E5%BC%82%E5%B8%B8%E6%B5%81%E6%8E%A7%E5%88%B6/</id>
+    <published>2021-05-29T06:50:55.133Z</published>
+    <updated>2021-05-29T06:50:55.133Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《深入理解计算机》读书笔记9：虚拟内存</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</id>
-    <published>2021-05-29T05:42:40.154Z</published>
-    <updated>2021-05-29T05:53:57.015Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B09-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/</id>
+    <published>2021-05-29T06:50:55.133Z</published>
+    <updated>2021-05-29T06:50:55.133Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《深入理解计算机》读书笔记3：程序的机器级表示</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</id>
+    <published>2021-05-29T06:50:55.132Z</published>
+    <updated>2021-05-29T06:50:55.132Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -249,10 +252,10 @@
   
   <entry>
     <title>《深入理解计算机》读书笔记3：处理器体系结构</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
-    <published>2021-05-29T05:42:40.153Z</published>
-    <updated>2021-05-29T05:47:04.512Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B04-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
+    <published>2021-05-29T06:50:55.132Z</published>
+    <updated>2021-05-29T06:50:55.132Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -276,10 +279,10 @@
   
   <entry>
     <title>《深入理解计算机》读书笔记5：优化程序性能</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B05-%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B05-%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/</id>
-    <published>2021-05-29T05:42:40.153Z</published>
-    <updated>2021-05-29T05:53:57.011Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B05-%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B05-%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/</id>
+    <published>2021-05-29T06:50:55.132Z</published>
+    <updated>2021-05-29T06:50:55.132Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -303,10 +306,10 @@
   
   <entry>
     <title>《深入理解计算机》读书笔记6：存储器层次结构</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B06-%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B06-%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/</id>
-    <published>2021-05-29T05:42:40.153Z</published>
-    <updated>2021-05-29T05:53:57.018Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B06-%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B06-%E5%AD%98%E5%82%A8%E5%99%A8%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/</id>
+    <published>2021-05-29T06:50:55.132Z</published>
+    <updated>2021-05-29T06:50:55.132Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -330,145 +333,10 @@
   
   <entry>
     <title>《深入理解计算机》读书笔记7：链接</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B07-%E9%93%BE%E6%8E%A5/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B07-%E9%93%BE%E6%8E%A5/</id>
-    <published>2021-05-29T05:42:40.153Z</published>
-    <updated>2021-05-29T05:53:56.943Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《深入理解计算机》读书笔记8：异常流控制</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B08-%E5%BC%82%E5%B8%B8%E6%B5%81%E6%8E%A7%E5%88%B6/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B08-%E5%BC%82%E5%B8%B8%E6%B5%81%E6%8E%A7%E5%88%B6/</id>
-    <published>2021-05-29T05:42:40.153Z</published>
-    <updated>2021-05-29T05:53:56.968Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《深入理解计算机》读书笔记11：网络编程</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
-    <published>2021-05-29T05:42:40.152Z</published>
-    <updated>2021-05-29T05:53:56.966Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《深入理解计算机》读书笔记12：并发编程</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</id>
-    <published>2021-05-29T05:42:40.152Z</published>
-    <updated>2021-05-29T05:53:56.958Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《深入理解计算机》读书笔记2：信息的表示和处理</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</id>
-    <published>2021-05-29T05:42:40.152Z</published>
-    <updated>2021-05-29T05:46:11.289Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul><p>原码、反码、补码</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
-      
-    
-    
-    
-    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《深入理解计算机》读书笔记3：程序的机器级表示</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B03-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</id>
-    <published>2021-05-29T05:42:40.152Z</published>
-    <updated>2021-05-29T05:47:04.515Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B07-%E9%93%BE%E6%8E%A5/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B07-%E9%93%BE%E6%8E%A5/</id>
+    <published>2021-05-29T06:50:55.132Z</published>
+    <updated>2021-05-29T06:50:55.133Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -492,12 +360,12 @@
   
   <entry>
     <title>《深入理解计算机》读书笔记1：计算机系统漫游</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/</id>
-    <published>2021-05-29T05:42:40.151Z</published>
-    <updated>2021-05-29T05:45:30.973Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/</id>
+    <published>2021-05-29T06:50:55.131Z</published>
+    <updated>2021-05-29T09:13:03.242Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a> </li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul><h2 id="计算机系统漫游"><a href="#计算机系统漫游" class="headerlink" title="计算机系统漫游"></a>计算机系统漫游</h2><p>本章只是对整个计算机体系进行概要的介绍，很多主题扩展开来又可以写一本很厚的书了。在阅读此章时，有个大概了解即可。</p><h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h3><p>源程序实际上就是一个由值0和1组成的位（又称为比特）序列，8个位被组织成一组，称为<strong>字节</strong>。每个字节表示程序中的某些文本字符。<br>系统中所有的信息–包括磁盘文件、内存中的程序、内存中存放用户数据以及网络上传送的数据，都是由一串比特表示的。区分不同数据对象的唯一方式是我们读到这些数据对象时的上下文。</p><p>下图描述了一个c程序是如何被编译运行的。</p><p><img src="/public/img/booknote/csapp_1_1.png"></p><h3 id="关于计算机的构成"><a href="#关于计算机的构成" class="headerlink" title="关于计算机的构成"></a>关于计算机的构成</h3><p><img src="/public/img/booknote/csapp_1_2.png"></p><h3 id="关于存储器"><a href="#关于存储器" class="headerlink" title="关于存储器"></a>关于存储器</h3><p><img src="/public/img/booknote/csapp_1_3.png"></p><p>分层，高层提供给低层高速缓存，越高层性能越好，价格越贵。</p><h3 id="计算机抽象的表示"><a href="#计算机抽象的表示" class="headerlink" title="计算机抽象的表示"></a>计算机抽象的表示</h3><p><img src="/public/img/booknote/csapp_1_4.png"></p><h3 id="关于shell"><a href="#关于shell" class="headerlink" title="关于shell"></a>关于shell</h3><p>shell是一个命令行解释器，它输出一个提示符，等待输入一个命令行，然后执行这个命令。如果该命令行的第一个单词不是内置的shell命令，那么shell就会假设这是一个可执行文件的名字，它将加载并运行这个文件。</p><h3 id="操作系统的两个基本功能："><a href="#操作系统的两个基本功能：" class="headerlink" title="操作系统的两个基本功能："></a>操作系统的两个基本功能：</h3><ol><li>防止硬件被失控的应用程序滥用；</li><li>向应用程序提成简单一致的机制来控制复杂而又通常大不相同的低级硬件设备。</li></ol><p>操作系统通过几个基本的抽象概念（进程、虚拟内存和文件）来实现这两个功能。<br>文件是对I/O设备的抽象表示，虚拟内存是对主存和磁盘I/O设备的抽象表示，进程则是对处理器、主存和I/O设备的抽象表示。</p><h3 id="Posix的由来"><a href="#Posix的由来" class="headerlink" title="Posix的由来"></a>Posix的由来</h3><p>20世纪80年代中期，Unix厂商试图通过加入新的、往往不兼容的特性来使他们的程序与众不同，为了阻止这种趋势，IEEE开始标准化Unix的开发，后来由Richard Stallman命名为“Posix”。结果就得到了一些列的标准，称作Posix标准。</p><h3 id="并发运行"><a href="#并发运行" class="headerlink" title="并发运行"></a>并发运行</h3><p>一个进程的指令和另一个进程的指令是交错执行的。</p><p>操作系统保持跟踪进程运行所需的所有状态信息。这种状态，也就是<strong>上下文</strong>。</p><p>进程间切换的交错执行的机制称为<strong>上下文切换</strong>。</p><p><img src="/public/img/booknote/csapp_1_5.png"></p><h3 id="Amdahl定律"><a href="#Amdahl定律" class="headerlink" title="Amdahl定律"></a>Amdahl定律</h3><p><img src="/public/img/booknote/csapp_1_6.png"></p><ul><li>a表示可以提升部分的比例</li><li>k表示可提升部分性能提升的比例</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a> </li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul><h2 id="计算机系统漫游"><a href="#计算机系统漫游" class="headerlink" title="计算机系统漫游"></a>计算机系统漫游</h2><p>本章只是对整个计算机体系进行概要的介绍，很多主题扩展开来又可以写一本很厚的书了。在阅读此章时，有个大概了解即可。</p><h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h3><p>源程序实际上就是一个由值0和1组成的位（又称为比特）序列，8个位被组织成一组，称为<strong>字节</strong>。每个字节表示程序中的某些文本字符。<br>系统中所有的信息–包括磁盘文件、内存中的程序、内存中存放用户数据以及网络上传送的数据，都是由一串比特表示的。区分不同数据对象的唯一方式是我们读到这些数据对象时的上下文。</p><p>下图描述了一个c程序是如何被编译运行的。</p><p><img src="./csapp_1_1.png"></p><h3 id="关于计算机的构成"><a href="#关于计算机的构成" class="headerlink" title="关于计算机的构成"></a>关于计算机的构成</h3><p><img src="./csapp_1_2.png"></p><h3 id="关于存储器"><a href="#关于存储器" class="headerlink" title="关于存储器"></a>关于存储器</h3><p><img src="./csapp_1_3.png"></p><p>分层，高层提供给低层高速缓存，越高层性能越好，价格越贵。</p><h3 id="计算机抽象的表示"><a href="#计算机抽象的表示" class="headerlink" title="计算机抽象的表示"></a>计算机抽象的表示</h3><p><img src="./csapp_1_4.png"></p><h3 id="关于shell"><a href="#关于shell" class="headerlink" title="关于shell"></a>关于shell</h3><p>shell是一个命令行解释器，它输出一个提示符，等待输入一个命令行，然后执行这个命令。如果该命令行的第一个单词不是内置的shell命令，那么shell就会假设这是一个可执行文件的名字，它将加载并运行这个文件。</p><h3 id="操作系统的两个基本功能："><a href="#操作系统的两个基本功能：" class="headerlink" title="操作系统的两个基本功能："></a>操作系统的两个基本功能：</h3><ol><li>防止硬件被失控的应用程序滥用；</li><li>向应用程序提成简单一致的机制来控制复杂而又通常大不相同的低级硬件设备。</li></ol><p>操作系统通过几个基本的抽象概念（进程、虚拟内存和文件）来实现这两个功能。<br>文件是对I/O设备的抽象表示，虚拟内存是对主存和磁盘I/O设备的抽象表示，进程则是对处理器、主存和I/O设备的抽象表示。</p><h3 id="Posix的由来"><a href="#Posix的由来" class="headerlink" title="Posix的由来"></a>Posix的由来</h3><p>20世纪80年代中期，Unix厂商试图通过加入新的、往往不兼容的特性来使他们的程序与众不同，为了阻止这种趋势，IEEE开始标准化Unix的开发，后来由Richard Stallman命名为“Posix”。结果就得到了一些列的标准，称作Posix标准。</p><h3 id="并发运行"><a href="#并发运行" class="headerlink" title="并发运行"></a>并发运行</h3><p>一个进程的指令和另一个进程的指令是交错执行的。</p><p>操作系统保持跟踪进程运行所需的所有状态信息。这种状态，也就是<strong>上下文</strong>。</p><p>进程间切换的交错执行的机制称为<strong>上下文切换</strong>。</p><p><img src="./csapp_1_5.png"></p><h3 id="Amdahl定律"><a href="#Amdahl定律" class="headerlink" title="Amdahl定律"></a>Amdahl定律</h3><p><img src="./csapp_1_6.png"></p><ul><li>a表示可以提升部分的比例</li><li>k表示可提升部分性能提升的比例</li></ul>]]></content>
     
     
       
@@ -519,10 +387,10 @@
   
   <entry>
     <title>《深入理解计算机》读书笔记10：系统级I/O</title>
-    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B010-%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/"/>
-    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/2021-04-13-%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B010-%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/</id>
-    <published>2021-05-29T05:42:40.151Z</published>
-    <updated>2021-05-29T05:53:56.970Z</updated>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B010-%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B010-%E7%B3%BB%E7%BB%9F%E7%BA%A7IO/</id>
+    <published>2021-05-29T06:50:55.131Z</published>
+    <updated>2021-05-29T06:50:55.131Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
     
@@ -541,6 +409,145 @@
     
     
     <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《深入理解计算机》读书笔记11：网络编程</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B011-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
+    <published>2021-05-29T06:50:55.131Z</published>
+    <updated>2021-05-29T06:50:55.131Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《深入理解计算机》读书笔记12：并发编程</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B012-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</id>
+    <published>2021-05-29T06:50:55.131Z</published>
+    <updated>2021-05-29T06:50:55.131Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《深入理解计算机》读书笔记2：信息的表示和处理</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/</id>
+    <published>2021-05-29T06:50:55.131Z</published>
+    <updated>2021-05-29T06:50:55.132Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8.html">计算机系统漫游</a></li><li><a href="/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86.html">信息的表示和处理</a></li><li><a href="">程序的机器级表示</a></li><li><a href="">处理器体系结构</a></li><li><a href="">优化程序性能</a></li><li><a href="">存储器层次结构</a></li><li><a href="">链接</a></li><li><a href="">异常流控制</a></li><li><a href="">虚拟内存</a></li><li><a href="">系统级I/O</a></li><li><a href="">网络编程</a></li><li><a href="">并发编程</a></li></ul><p>原码、反码、补码</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/2021/04/13/%E6%B7</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="深入理解计算机" scheme="http://shjlone.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Kotlin实战》读书笔记</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AKotlin%E5%AE%9E%E6%88%98%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AKotlin%E5%AE%9E%E6%88%98%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-05-29T06:50:55.130Z</published>
+    <updated>2021-05-29T06:50:55.130Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h5><ul><li>不需要分号</li></ul><h5 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h5><ul><li>fun声明函数</li><li>函数可以定义在文件的最外层</li></ul><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">max</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">if</span>(a&gt;b) a <span class="keyword">else</span> b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>表达式函数体</strong></p><pre><code>fun max(a: Int, b: Int): Int = if(a&gt;b) a else b</code></pre><p>表达式函数体可以省略返回类型，Kotlin会进行类型推导</p><pre><code>fun max(a: Int, b: Int)= if(a&gt;b) a else b</code></pre><p>数组就是类</p><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><ul><li>var表示可写属性</li><li>val表示只读属性</li></ul><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> answer = <span class="number">42</span> <span class="comment">//这个变量永不为null</span></span><br><span class="line"><span class="keyword">var</span> answer1:<span class="built_in">Int</span>? = <span class="number">40</span> <span class="comment">// 这个变量可以为null</span></span><br><span class="line"><span class="keyword">val</span> answer:<span class="built_in">Int</span> = <span class="number">42</span></span><br><span class="line"><span class="keyword">val</span>表示不可变引用，使用<span class="keyword">val</span>声明的变量不能在初始化之后再次赋值。</span><br><span class="line"><span class="keyword">var</span>可变引用，可以改变值，但不能改变类型。</span><br><span class="line"><span class="keyword">var</span> answer = <span class="number">13</span></span><br><span class="line">answer = <span class="string">&quot;no &quot;</span> 这样是错误的</span><br></pre></td></tr></table></figure><p><strong>字符串模板</strong></p><pre><code>$name$&#123;name&#125;</code></pre><p><strong>类</strong></p><pre><code>class Person(val name:String)class Person(val name:String, var isMarried:Boolean)</code></pre><p><strong>自定义访问器</strong></p><pre><code>class Rectangle(val height:Int, val width:Int) &#123;    val isSquare:Boolean        get() &#123;            return height == width        &#125;    //或者    get() = height == width&#125;</code></pre><p>包层级结构不需要遵守目录层级结构</p><p><strong>枚举</strong></p><pre><code>enum class Color(val r:Int, val g:Int, val b:Int) &#123;RED(255,0,0),GREEN(0,255,0);fun rgb() = (r*256 + g)*256 + b&#125;println(Color.GREEN.rgb())fun getMnumonic(color: Color) =     when(color) &#123;        Color.RED -&gt; &quot;Richard&quot;        Color.GREEN -&gt; &quot;Gave&quot;    &#125;</code></pre><p>@JvmOverloads， 会生成Java重载函数</p><p>顶层属性和函数</p><p>扩展函数不能被重写</p><h4 id="扩展属性"><a href="#扩展属性" class="headerlink" title="扩展属性"></a>扩展属性</h4><p>vararg 修饰符  可变参数</p><h4 id="中缀调用"><a href="#中缀调用" class="headerlink" title="中缀调用"></a>中缀调用</h4><p>局部函数</p><p>kotlin类声明默认是final和public，要想声明不是final的，将其标记为open</p><p>open、final、abstract</p><p>lateinit</p><p><strong>object</strong></p><p>定义一个类并同事创建一个实例，使用场景：</p><ul><li>对象声明是定义单例的一种方式</li><li>伴生对象可以持有工厂方法和其他与整个类相关，但在调用时并不依赖类实例的方法。</li><li>对象表达式用来替代Java的匿名内部类</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">object DataProviderManager &#123;</span><br><span class="line">    <span class="function">fun <span class="title">registarDataProvider</span><span class="params">(provider: DataProvider)</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">DataProviderManager.registarDataProvider(...)</span><br></pre></td></tr></table></figure><p><strong>伴生对象companion</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClaa</span> </span>&#123;</span><br><span class="line">    companion object Factory&#123;</span><br><span class="line">        <span class="function">fun <span class="title">create</span><span class="params">()</span>:MyClass </span>= MyClass()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//该伴生对象的成员可通过只使用类名作为限定符来调用</span></span><br><span class="line">val instance = MyClass.create()</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以省略伴生对象的名称，在这种情况下将使用名称 Companion</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    companion object &#123; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">val x = MyClass.Companion</span><br></pre></td></tr></table></figure><p>在 JVM 平台，如果使用 @JvmStatic 注解，你可以将伴生对象的成员生成为真正的静态方法和字段</p><p>直接通过容器类名来访问整个对象的方法和属性的能力</p><p>匿名对象可以实现多个接口或者不实现接口</p><p>lamdba表达式始终用花括号包围</p><pre><code>val sum = &#123;x: Int, y: Int -&gt; x+y&#125;println(sum(1,2))</code></pre><p>允许lamdba内部访问非final变量甚至修改它们</p><p>成员引用</p><pre><code>val getAge = Person::age</code></pre><p>all any  count  find  对集合应用判断式</p><p>with函数<br>apply</p><p>类型系统</p><p>可空性</p><pre><code>fun strLen(s:String) = s.lengthfun strLen(s:String?) = s.length</code></pre><p>安全调用运算符 ?.，只要链式中一个值为null，则整个表达式都返回null</p><pre><code>s?.toUpperCase()val testStr : String? = nullval result = testStr?.length?.plus(5)?.minus(10)println(result)</code></pre><p>?:</p><p>当一个函数有返回值时，如果方法中的代码使用?.去返回一个值，那么方法的返回值的类型后面也要加上?符号</p><pre><code>fun funNullMethod() : Int? &#123;    val str : String? = &quot;123456&quot;    return str?.length&#125;</code></pre><p>as?</p><p>非空断言  “!!”    显示地抛出异常</p><h5 id="let函数"><a href="#let函数" class="headerlink" title="let函数"></a>let函数</h5><p>作用：使用符号?.验证的时候忽略掉null</p><p>用法：变量?.let{…}</p><pre><code>val arrTest : Array&lt;Int?&gt; = arrayOf(1,2,null,3,null,5,6,null)// 传统写法for (index in arrTest) &#123;    if (index == null)&#123;        continue    &#125;    println(&quot;index =&gt; $index&quot;)&#125;// let写法for (index in arrTest) &#123;    index?.let &#123; println(&quot;index =&gt; $it&quot;) &#125;&#125;</code></pre><h5 id="Evils操作符"><a href="#Evils操作符" class="headerlink" title="Evils操作符"></a>Evils操作符</h5><p><strong>?:</strong></p><p>判断一个可空类型时，会返回一个我们自己设定好的默认值</p><pre><code>val testStr : String? = nullvar length = 0// ?: 写法length = testStr?.length ?: -1println(length)</code></pre><p><strong>!!</strong></p><p>判断一个可空类型时，会显示的抛出空引用异常</p><pre><code>val testStr : String? = nullprintln(testStr!!.length)</code></pre><p><strong>as?</strong></p><p>安全的类型转换</p><pre><code>val num2 : Int? = &quot;Koltin&quot; as? Intprintln(&quot;nun2 = $num2)</code></pre><p>基本类型、包装类型的转换需要通过API</p><p>Any  kotlin基类<br>Unit  kotlin中的void<br>Nothing    这个函数永不返回</p><p>List    listOf    mutableListOf、arrayListOf<br>Set    setOf    mutableSetOf、hashSetOf、linkedSetOf、sortedSetOf<br>Map    mapOf    mutableMapOf、hashMapOf、linkedMapOf、sortedMapOf</p><p>重载二元算术运算<br>operator</p><p>委托属性  by lazy()</p><p>kotlin允许使用对应名称的函数来重载一些标准的数学运算，但不能定义自己的运算符。</p><p>函数类型</p><p>内联函数</p><p>注解<br>@JvmName<br>@JvmStatic<br>@JvmOverloads<br>@JvmField</p><p>注解类：用来定义关联到声明和表达式的元数据的结构，它们不能包含任何代码</p><p>元注解<br>@Retention    说明你声明的注解是否会存储到.class文件，以及在运行时是否可以通过反射来访问它。</p><p>kotlin反射API</p><p>invoke</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;基本规则&quot;&gt;&lt;a href=&quot;#基本规则&quot; class=&quot;headerlink&quot; title=&quot;基本规则&quot;&gt;&lt;/a&gt;基本规则&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;不需要分号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;header</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收集的电子书</title>
+    <link href="http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
+    <id>http://shjlone.github.io/wiki/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%B5%E5%AD%90%E4%B9%A6/</id>
+    <published>2021-05-29T06:50:55.130Z</published>
+    <updated>2021-05-29T06:50:55.130Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>如何阅读一本书</li></ul><p><strong>ActionScript、Flex</strong></p><ul><li>Actionscript 3 image effects</li><li>ActionScript 3</li><li>ActionScript Graphing Cookbook</li><li>ActionScript</li><li>ActionScript大型网页游戏开发</li><li>AdvancED ActionScript Animation动画高级编程</li><li>AdvancED Game Design with Flash</li><li>air_buildingapps</li><li>Flash Cinematic Techniques</li><li>Flash Game Development by Example</li><li>Flex4权威指南</li><li>FLEX企业应用开发实战</li><li>Foundation Game Design with Flash</li><li>FriendsofED</li><li>The Essential Guide to Flash Games(flash游戏编程指南)</li><li>优化Flash性能</li><li>AIR_Android应用开发实战</li><li>Developing Android Applications with Flex 4</li><li>Flash+Flex+Air移动开发入门经典</li><li>mobile-encoding-android-v2_7</li><li>Packt Publishing Flash Development for Android Cookbook (2011)</li><li>使用Flex4</li><li>ABCStructure</li><li>amf0_spec_121207</li><li>amf3_spec_121207</li><li>avm2overview</li><li>swf_file_format_spec_v10</li><li>video_file_format_spec_v10_1</li></ul><br/><p><strong>Android</strong></p><ul><li>Android 4高级编程(第3版)</li><li>Android Developer Tools Essentials</li><li>Android Native Development Kit Cookbook</li><li>Android内核剖析(完整版)</li><li>Android多媒体开发高级编程</li><li>Android应用开发详解</li><li>Android开发精要</li><li>ANDROID框架揭秘</li><li>Android系统源代码情景分析</li><li>Android软件安全与逆向分析</li><li>Dalvik-Bytecode</li><li>embedded_android</li><li>Fragments for All Presentation</li><li>Google Android SDK开发范例大全(第3版)</li><li>Groovy in Action</li><li>Groovy中文教程</li><li>Kotlin in Action</li><li>kotlin-for-android-developers-zh</li><li>Kotlin官方参考文档中文版</li><li>Practical</li><li>practical_android_4_games_development</li><li>Smashing_Android_UI</li><li>The Busy Coder’s Guide to Android Development, Version 4</li><li>[Gradle</li><li>[www</li><li>深入理解Android(卷2)</li><li>深入理解android</li><li>疯狂Android讲义</li><li>精通Android3</li></ul><br/><p><strong>C#</strong></p><ul><li>C#入门经典第5版中文高清版</li><li>C#高级编程(中文第七版)</li></ul><br/><p><strong>C、C++</strong></p><ul><li>Accelerated C++中文版</li><li>Andrew Koenig：C 陷阱与缺陷@2002 (扫描版)</li><li>An_Introduction_to_GCC_中文</li><li>c++  Primer 第5版</li><li>C+++GUI+QT3编程_11774607</li><li>C++STL标准程序库开发指南 PDF电子书下载 带书签目录</li><li>C++标准程序库</li><li>C++模板元编程</li><li>C++沉思录(Ruminations on C++)中文第2版</li><li>C++程序设计原理与实践(中文完整版)</li><li>C++编程规范-101条规则准则与最佳实践</li><li>C++语言的设计和演化</li><li>C专家编程</li><li>C和指针(第二版)高清全版469页</li><li>C程序设计(第四版)谭浩强</li><li>C程序设计语言(第2版_新版)</li><li>C程序设计语言(第2版_新版)习题解答</li><li>C程序设计语言(第2版_新版)非扫描版&amp;详细书签版</li><li>C语言入门经典(第四版)</li><li>C语言范例开发大全</li><li>Effective C   中文版第三版 高清PDF</li><li>Effective STL 中文版</li><li>Essential C++中文版</li><li>Head</li><li>STL源码剖析简体中文完整版(清晰扫描带目录)</li><li>你必须知道的495个C语言问题</li><li>像计算机科学家一样思考C++</li><li>嗨翻C语言_13421426(jb51</li><li>易学C++</li></ul><br/><p><strong>English</strong></p><ul><li>无敌初中必考语法</li><li>新编英语语法教程+学生用书+第5版_PDF</li><li>无敌英语语法：全范围</li></ul><br/><p><strong>History</strong></p><ul><li><p>乔治·奥威尔：一九八四</p></li><li><p>何清涟：现代化的陷阱</p></li><li><p>吴思：潜规则——中国历史中的真实游戏</p></li><li><p>吴思：血酬定律——中国历史中的生存游戏</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (上)</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (下)</p></li><li><p>威廉·夏伊勒：第三帝国的兴亡 (中)</p></li><li><p>学会提问-批判性思维指南</p></li><li><p>弗洛伊德：梦的解析</p></li><li><p>弗洛伊德：精神分析引论</p></li><li><p>徐中约《中国近代史》（PDF-港版完整无删减）上</p></li><li><p>徐中约《中国近代史》（PDF-港版完整无删减）下</p></li><li><p>斯科特·派克：少有人走的路</p></li><li><p>罗伯特·西奥迪尼：影响力</p></li><li><p>金观涛 &amp; 刘青峰：兴盛与危机——论中国社会超稳定结构</p></li><li><p>阿利安：亚历山大远征记</p></li><li><p>高华：在历史的风陵渡口</p></li><li><p>黄仁宇：中国大历史</p></li><li><p>剑桥中国历史</p><ul><li>中华人民共和国史 (上卷 扫描版)</li><li>明史 (扫描版)</li><li>晚清史 (上卷 扫描版)</li><li>晚清史 (下卷 扫描版)</li><li>民国史 (上卷 扫描版)</li><li>民国史 (下卷 扫描版)</li><li>秦汉史 (扫描版)</li><li>辽西夏金元史 (扫描版)</li><li>隋唐史 (扫描版)</li></ul></li></ul><br/><p><strong>iOS</strong></p><ul><li>AppDistributionGuide</li><li>Effective Objective-C 2</li><li>iOS应用逆向工程 分析与实战</li><li>iOS编程+第4版</li><li>Objective C 编程之道</li><li>Objective C程序设计</li><li>Objective-C编程全解 第3版</li><li>Objective-C高级编程 iOS与OS X多线程和内存管理</li><li>OSX与iOS内核编程</li></ul><br/><p><strong>Java</strong></p><ul><li>advancedservletsjsp</li><li>Effective Enterprise Java(Chinese)</li><li>Head First Servlets and JSP  中文版  第2版</li><li>Head First Servlets and JSP 2nd</li><li>Head First Web设计 (中文版)</li><li>JAVA并发编程实践（中文）</li><li>Java并发编程实践（英文版）</li><li>Java本地接口(JNI)编程指南和规范2</li><li>JAVA案例开发集锦</li><li>Java编程思想_第4版_中文完整版</li><li>Java虚拟机规范中文版</li><li>Java迷题</li><li>JAVA面试题解惑系列</li><li>servlet-2_5-mrel2-spec</li><li>Think In Java 4完美高清中文版</li><li>《Java网络编程(第4版)》</li><li>深入浅出数据分析（美）米尔顿著</li><li>Effective Java（第2版）</li></ul><br/><p><strong>Javascript</strong></p><ul><li>HTML5高级程序设计</li><li>javascript dom 编程艺术</li><li>JavaScript权威指南(第6版)(中文版)</li><li>JavaScript高级程序设计(中文)-第3版</li></ul><br/><p><strong>kinect</strong></p><ul><li>51CTO下载-kinect应用开发实战（全书）</li><li>Kinect人机交互开发实践</li></ul><br/><p><strong>Linux</strong></p><ul><li>bash Cookbook Solutions and Examples for bash Users</li><li>Linux Shell Scripting Cookbook 2nd Edition May 2013</li><li>Linux 与 UNIX Shell 编程指南</li><li>Linux</li><li>linux内核源代码情景分析(上)</li><li>linux内核源代码情景分析(下)</li><li>Linux命令行与Shell脚本编程大全 第2版</li><li>Understanding The Linux Kernel</li><li>UNIX操作系统基础使用手册</li><li>精通UNIXShell脚本编程</li><li>高级Bash脚本编程指南(Advanced Bash-Scripting</li><li>鸟哥的Linux私房菜服务器架设篇(第三版)</li></ul><br/><p><strong>Music</strong></p><ul><li>五线谱入门</li><li>基本乐理</li></ul><br/><p><strong>PHP</strong></p><ul><li>PHP和MySQL</li><li>PHP开发实战1200例</li><li>symfony权威指南</li><li>深入PHP面向对象模式与实践</li><li>白帽子讲 Web 安全</li><li>高性能mysql第三版 </li><li>PHP核心技术与最佳实践</li><li>PHP内核剖析</li><li>深入理解PHP内核</li></ul><br/><p><strong>Python</strong></p><ul><li>Beginning Game Development with Python and Pygame</li><li>Dive into Python</li><li>Effective</li><li>Expert Python Programming(2nd)</li><li>make game with python &amp; pyGame</li><li>Python 3</li><li>Python Cookbook</li><li>Python参考手册(第4版)</li><li>Python基础教程(第2版)</li><li>python标准库中文版PDF(带章节书签)</li><li>Python核心编程第二版-习题答案</li><li>Python源码剖析</li><li>Python灰帽子 黑客与逆向工程师的Python编程之道</li><li>Python灰帽子：黑客与逆向工程师的Python编程之道(英文版)</li><li>The Django Book 2</li><li>The Python Standard Library by Example</li><li>深入学习Python 3</li><li>编写高质量代码 改善Python程序的91个建议</li></ul><br/><p><strong>Qt</strong></p><ul><li>C++  Qt设计模式（第2版）</li><li>QmlBook-In-Chinese</li><li>Qt Creator快速入门</li><li>Qt Quick核心编程 13678855</li><li>Qt5开发及实例</li><li>Qt及Qt Quick开发实战精解</li><li>QT学习之路(全)</li><li>QT高级编程_chs</li><li>the_art_of_building_qt_applications</li><li>《C++设计模式–基于Qt4开源跨平台开发框架》</li></ul><br/><p><strong>PyQt</strong></p><ul><li>pyqt-book</li><li>PyQt5 tutorial</li><li>pyqt5__pythonGui入门教程</li><li>PyQt5入门</li><li>Rapid GUI Programming with Python and Qt</li></ul><p><strong>Temp</strong></p><ul><li>51CTO下载-ffmpeg教程</li><li>CMake Practice</li><li>design-patterns</li><li>FFMPEG教程完美排版</li><li>GarageBand使用指南</li><li>growth全栈增长工程师指南</li><li>InstallationGuide</li><li>kotlin-in-action-in-chinese</li><li>OpenSL_ES_Specification_1</li><li>SDL+GUIDE+中文译本</li><li>SWIGDocumentation</li><li>TCP-IP详解(卷一、二、三)</li><li>Wireshark 数据包分析实战(第2版)最新中文版</li><li>Wireshark 数据包分析实战详解</li><li>《图解TCP IP(第5版)》</li><li>图解设计模式</li><li>程序是怎样跑起来的_PDF电子书下载 带书签目录 高清完整版</li><li>网络是怎样连接的</li><li>计算机是怎样跑起来的</li><li>设计模式</li><li>设计模式之禅(完整高清版)</li><li>Java加密与解密的艺术</li><li>一个证券分析师的醒悟 张化桥的股市真话</li><li>游戏之旅-我的编程感悟</li><li>游戏设计-原理与实践</li><li>荣辱二十年-我的股市人生</li><li>计算机程序的构造和解释</li></ul><br/><p><strong>产品、设计、思想</strong></p><ul><li>A Pattern Language</li><li>Head First 设计模式</li><li>Java与模式</li><li>Java夜未眠</li><li>java设计模式</li><li>人件（原书第3版）</li><li>人月神话</li><li>代码之美</li><li>你的灯亮着吗</li><li>启示录：打造用户喜爱的产品（英文）</li><li>大话设计模式</li><li>学会提问-批判性思维指南</li><li>建筑的永恒之道</li><li>数据结构经典问题和算法分析</li><li>浪潮之巅</li><li>漫谈设计模式</li><li>编码的奥秘</li><li>设计心理学</li><li>设计模式-可复用面向对象软件的基础</li><li>设计模式精解</li><li>设计模式：Java语言中的应用</li><li>高效程序的奥秘</li><li>黑客与画家 硅谷创业之父Paul Graham文集</li></ul><br/><p><strong>产品经理</strong></p><ul><li>互联网产品经理改变世界</li><li>产品经理手册  第3版</li><li>产品经理方法论</li><li>区块链将如何改变世界</li><li>用户体验要素</li><li>用户体验面面观-方法、工具与实践</li></ul><br/><p><strong>德州扑克</strong></p><ul><li>let there be range(中文)</li><li>加注的优势：当今锦标赛激进策略</li><li>哈灵顿在现金上2中文版</li><li>扑克蓝图</li></ul><br/><p><strong>摄影</strong></p><ul><li>数码单反摄影从入门到精通第一卷</li><li>美国纽约摄影学院摄影教材</li></ul><br/><p><strong>服务端</strong></p><ul><li>docker_practice</li><li>Docker从入门到实践</li><li>PHP-Debug-Manual-public</li><li>Redis开发运维实践指南</li><li>Redis源代码分析</li><li>云计算架构技术与实践</li><li>亿级流量网站架构核心技术</li><li>伊甸园之河</li><li>大型网站技术架构核心原理与案例分析</li><li>实用负载均衡技术网站性能优化攻略</li><li>极客与团队</li><li>深入分布式缓存从原理到实践</li><li>精通正则表达式</li><li>软件架构设计</li><li>高扩展性网站的50条原则</li></ul><br/><p><strong>算法、数据结构</strong></p><ul><li>《大话数据结构》 程杰</li><li>程序员实用算法</li><li>算法之道</li><li>算法导论(第二版)习题答案(英文版)</li><li>算法导论</li></ul><br/><p><strong>管理</strong></p><ul><li>MBA教不了的创富课</li></ul><br/><p><strong>股票</strong></p><ul><li>与庄共舞（股票实战操作）</li><li>从零开始学炒股</li><li>价值投资系列之25《上市公司财报解读》</li><li>你不知道的中国股事那些事(高清)</li><li>投资正途</li><li>日本蜡烛图技术</li><li>江恩投资几何学原理</li><li>江恩测市法则（经典之作）</li><li>海龟交易法则</li><li>看盘细节(精选)</li><li>看盘细节</li><li>短线炒股就这几招（操盘必读）</li><li>短线点金：揭开市场的底牌</li><li>短线点金：破解股价的运行轨迹</li><li>短线点金：道破股价涨跌之玄机</li><li>缠中说禅《教你炒股票》1-108课图文全版</li><li>缠论解析  缠中说禅技术理论图解(清晰版)</li><li>聪明的投资者（高质量）</li><li>胡立阳股票投资100招（清晰）</li><li>证券市场基础知识</li><li>【投资艺术】作者：查尔斯 艾里斯</li><li>巴菲特教你读财报</li><li>股票作手回忆录</li><li>超越金融  索罗斯的哲学   (美)乔治·索罗斯   2</li><li>金融炼金术(高质量）</li><li>高胜算操盘</li><li>股市操练大全12345</li></ul><br/><p><strong>计算机基础</strong></p><ul><li>深入理解计算机系统(原书第2版)</li><li>编译、链接、装载</li><li>程序员的自我修养—链接、装载与库</li><li>linker and loader</li><li>现代编译原理：Ｃ语言描述</li><li>编译原理及实践</li><li>编译原理基础</li><li>编译原理（龙书）中文版</li><li>编译原理及实践</li></ul><br/><p><strong>音视频相关</strong></p><ul><li>FFmpeg Tutorial</li><li>FFmpegBasics</li><li>ffmpeg基础库编程开发</li><li>OpenCV 2 计算机视觉编程手册_中文版</li><li>学习OpenCV</li></ul><br/><p><strong>项目管理</strong></p><ul><li>Project 2016项目管理自学经典_王菁_清华大学_2016</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;如何阅读一本书&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;ActionScript、Flex&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Actionscript 3 image effects&lt;/li&gt;
+&lt;li&gt;ActionScript 3&lt;/li&gt;
+&lt;li</summary>
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://shjlone.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
